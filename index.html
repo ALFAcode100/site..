@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="YAZLI FATEH | ALFA - Software Developer, Web Developer & UI/UX Designer">
+<title>YAZLI FATEH | ALFA</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800&display=swap');
+
+:root{
+    --bg:#050505;
+    --cyan:#00F5FF;
+    --purple:#7B61FF;
+    --blue:#00A3FF;
+    --gold:#FFD700;
+    --white:#FFFFFF;
+    --gray:#9da7b3;
+    --glass:rgba(255,255,255,.055);
+    --border:rgba(0,245,255,.18);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:white;
+    font-family:Inter,sans-serif;
+    overflow-x:hidden;
+}
+
+/* ================= BACKGROUND ================= */
+
+#particles{
+    position:fixed;
+    inset:0;
+    z-index:-5;
+}
+
+.grid{
+    position:fixed;
+    inset:0;
+    z-index:-4;
+    opacity:.13;
+    background-image:
+        linear-gradient(rgba(0,245,255,.2) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(123,97,255,.2) 1px,transparent 1px);
+    background-size:60px 60px;
+    transform:perspective(600px) rotateX(60deg) scale(1.7);
+    transform-origin:center bottom;
+    animation:gridMove 15s linear infinite;
+}
+
+@keyframes gridMove{
+    from{background-position:0 0,0 0}
+    to{background-position:0 60px,60px 0}
+}
+
+.ambient{
+    position:fixed;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.12;
+    z-index:-6;
+}
+
+.ambient.one{
+    background:var(--cyan);
+    top:-250px;
+    left:-180px;
+}
+
+.ambient.two{
+    background:var(--purple);
+    right:-220px;
+    bottom:-200px;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+    position:fixed;
+    top:18px;
+    left:50%;
+    transform:translateX(-50%);
+    width:min(1100px,92%);
+    padding:13px 18px;
+    border:1px solid var(--border);
+    border-radius:20px;
+    background:rgba(5,5,5,.65);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+    box-shadow:0 0 35px rgba(0,245,255,.08);
+}
+
+.logo{
+    font-family:Orbitron;
+    font-weight:800;
+    font-size:20px;
+    letter-spacing:3px;
+    color:var(--cyan);
+    text-shadow:0 0 15px var(--cyan);
+}
+
+.logo span{
+    color:var(--gold);
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    color:#dce3e9;
+    text-decoration:none;
+    font-size:13px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--cyan);
+    text-shadow:0 0 12px var(--cyan);
+}
+
+.menu{
+    display:none;
+    border:0;
+    background:none;
+    color:white;
+    font-size:25px;
+}
+
+/* ================= GENERAL ================= */
+
+section{
+    width:min(1120px,92%);
+    margin:auto;
+    padding:110px 0;
+}
+
+.section-title{
+    font-family:Orbitron;
+    font-size:clamp(28px,5vw,48px);
+    margin-bottom:12px;
+}
+
+.section-title span{
+    color:var(--cyan);
+    text-shadow:0 0 18px rgba(0,245,255,.5);
+}
+
+.section-description{
+    color:var(--gray);
+    max-width:700px;
+    margin-bottom:35px;
+}
+
+.card{
+    position:relative;
+    overflow:hidden;
+    padding:28px;
+    border-radius:24px;
+    border:1px solid rgba(0,245,255,.14);
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.075),
+        rgba(255,255,255,.018)
+    );
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.08),
+        0 20px 60px rgba(0,0,0,.3);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    border-color:rgba(0,245,255,.45);
+    box-shadow:
+        0 20px 70px rgba(0,245,255,.1),
+        inset 0 1px rgba(255,255,255,.1);
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    width:150px;
+    height:2px;
+    top:0;
+    left:10%;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        var(--cyan),
+        transparent
+    );
+    box-shadow:0 0 15px var(--cyan);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding-top:130px;
+}
+
+.hero-content{
+    max-width:950px;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 16px;
+    border-radius:50px;
+    border:1px solid rgba(0,245,255,.35);
+    background:rgba(0,245,255,.05);
+    color:var(--cyan);
+    font-size:11px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    box-shadow:0 0 25px rgba(0,245,255,.08);
+}
+
+.hero h1{
+    margin:25px 0 15px;
+    font-family:Orbitron;
+    font-weight:800;
+    font-size:clamp(48px,9vw,105px);
+    letter-spacing:5px;
+    line-height:1;
+    background:linear-gradient(
+        90deg,
+        white,
+        var(--cyan),
+        white,
+        var(--purple),
+        white
+    );
+    background-size:300%;
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    animation:shine 7s linear infinite;
+}
+
+@keyframes shine{
+    to{
+        background-position:300%;
+    }
+}
+
+.hero-subtitle{
+    font-family:Orbitron;
+    color:#dbe2e8;
+    font-size:clamp(12px,2vw,19px);
+    letter-spacing:3px;
+}
+
+.hero-description{
+    color:var(--gray);
+    max-width:720px;
+    margin:25px auto;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.btn{
+    position:relative;
+    overflow:hidden;
+    display:inline-block;
+    padding:13px 23px;
+    border-radius:13px;
+    text-decoration:none;
+    color:white;
+    border:1px solid rgba(0,245,255,.4);
+    background:rgba(255,255,255,.045);
+    backdrop-filter:blur(10px);
+    transition:.35s;
+}
+
+.btn:hover{
+    color:var(--cyan);
+    transform:translateY(-3px);
+    box-shadow:0 0 28px rgba(0,245,255,.3);
+}
+
+.btn.gold{
+    border-color:rgba(255,215,0,.4);
+}
+
+.btn.gold:hover{
+    color:var(--gold);
+    box-shadow:0 0 28px rgba(255,215,0,.2);
+}
+
+/* ================= ABOUT ================= */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1.35fr;
+    gap:20px;
+}
+
+.hologram{
+    min-height:380px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+        radial-gradient(
+            circle,
+            rgba(0,245,255,.18),
+            transparent 55%
+        );
+}
+
+.orb{
+    width:155px;
+    height:155px;
+    border-radius:50%;
+    border:1px solid var(--cyan);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:var(--cyan);
+    font-family:Orbitron;
+    font-size:42px;
+    font-weight:800;
+    box-shadow:
+        0 0 30px var(--cyan),
+        inset 0 0 30px rgba(0,245,255,.25);
+    animation:pulse 3s infinite;
+}
+
+@keyframes pulse{
+    50%{
+        transform:scale(1.08);
+        box-shadow:
+            0 0 70px var(--cyan),
+            inset 0 0 40px rgba(0,245,255,.4);
+    }
+}
+
+.about-text p{
+    color:var(--gray);
+    margin-bottom:15px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin-top:25px;
+}
+
+.stat strong{
+    display:block;
+    color:var(--gold);
+    font-family:Orbitron;
+    font-size:27px;
+}
+
+.stat small{
+    color:var(--gray);
+}
+
+/* ================= SKILLS ================= */
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:15px;
+}
+
+.skill{
+    padding:18px;
+    min-height:90px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.skill-name{
+    font-family:Orbitron;
+    font-size:16px;
+    color:white;
+    text-shadow:0 0 12px rgba(0,245,255,.5);
+}
+
+/* ================= SERVICES ================= */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:17px;
+}
+
+.icon{
+    font-size:32px;
+    color:var(--cyan);
+    margin-bottom:14px;
+    text-shadow:0 0 18px var(--cyan);
+}
+
+.card h3{
+    font-family:Orbitron;
+    font-size:17px;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:var(--gray);
+    font-size:14px;
+}
+
+/* ================= COURSES ================= */
+
+.courses-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.featured{
+    border-color:rgba(255,215,0,.4);
+}
+
+.price{
+    color:var(--gold);
+    font-family:Orbitron;
+    font-size:34px;
+    font-weight:800;
+    margin:18px 0;
+}
+
+.price small{
+    color:var(--gray);
+    font-family:Inter;
+    font-size:11px;
+}
+
+.clean-list{
+    list-style:none;
+    color:#cbd3dc;
+    font-size:14px;
+}
+
+.clean-list li{
+    margin:10px 0;
+}
+
+.clean-list li::before{
+    content:"✓";
+    color:var(--cyan);
+    margin-right:8px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.contact-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-top:13px;
+    padding:16px;
+    border-radius:15px;
+    border:1px solid rgba(255,255,255,.08);
+    background:rgba(255,255,255,.025);
+}
+
+.contact-item .icon{
+    margin:0;
+    font-size:25px;
+}
+
+.contact-item b{
+    font-size:14px;
+}
+
+.contact-item span{
+    display:block;
+    color:var(--gray);
+    font-size:13px;
+    margin-top:2px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    text-align:center;
+    padding:50px 20px;
+    border-top:1px solid rgba(255,255,255,.08);
+    color:var(--gray);
+    font-size:13px;
+}
+
+footer strong{
+    font-family:Orbitron;
+    color:var(--cyan);
+    letter-spacing:2px;
+}
+
+/* ================= REVEAL ================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(35px);
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.reveal.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ================= CURSOR LIGHT ================= */
+
+.cursor-light{
+    position:fixed;
+    width:280px;
+    height:280px;
+    border-radius:50%;
+    pointer-events:none;
+    z-index:-1;
+    transform:translate(-50%,-50%);
+    background:
+        radial-gradient(
+            circle,
+            rgba(0,245,255,.12),
+            transparent 65%
+        );
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:850px){
+
+    nav ul{
+        display:none;
+        position:absolute;
+        top:65px;
+        left:0;
+        right:0;
+        padding:20px;
+        border-radius:18px;
+        flex-direction:column;
+        background:rgba(5,5,5,.96);
+        border:1px solid var(--border);
+    }
+
+    nav ul.open{
+        display:flex;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .skills-grid,
+    .services-grid,
+    .courses-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:520px){
+
+    section{
+        padding:85px 0;
+    }
+
+    .hero h1{
+        letter-spacing:2px;
+    }
+
+    .hero-subtitle{
+        line-height:1.7;
+        letter-spacing:1px;
+    }
+
+    .skills-grid,
+    .services-grid,
+    .courses-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="ambient one"></div>
+<div class="ambient two"></div>
+<div class="grid"></div>
+
+<canvas id="particles"></canvas>
+<div class="cursor-light" id="cursorLight"></div>
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+
+    <div class="logo">
+        ALFA<span>_</span>
+    </div>
+
+    <button class="menu" id="menu">
+        ☰
+    </button>
+
+    <ul id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content reveal">
+
+        <span class="badge">
+            NEXT GENERATION DIGITAL SOLUTIONS
+        </span>
+
+        <h1>
+            YAZLI FATEH
+        </h1>
+
+        <div class="hero-subtitle">
+            ALFA • SOFTWARE DEVELOPER • WEB DEVELOPER • UI/UX DESIGNER
+        </div>
+
+        <p class="hero-description">
+            Building modern digital experiences that combine powerful
+            technology, performance, elegant design and exceptional
+            user experience.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#services" class="btn">
+                Explore My Work
+            </a>
+
+            <a href="#contact" class="btn gold">
+                Start A Project
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="reveal">
+
+    <h2 class="section-title">
+        About <span>ALFA</span>
+    </h2>
+
+    <p class="section-description">
+        From ideas to professional digital products.
+    </p>
+
+    <div class="about-grid">
+
+        <div class="card hologram">
+            <div class="orb">
+                A
+            </div>
+        </div>
+
+        <div class="card about-text">
+
+            <h3>
+                YAZLI FATEH — ALFA
+            </h3>
+
+            <p>
+                My name is Yazli Fateh, professionally known as ALFA.
+                I am a passionate Software Developer and Web Developer
+                dedicated to creating modern digital solutions that
+                combine innovation, performance and professional design.
+            </p>
+
+            <p>
+                With more than 4 years of experience in programming and
+                web development, I focus on delivering high-quality
+                digital products that provide real value and exceptional
+                user experiences.
+            </p>
+
+            <div class="stats">
+
+                <div class="stat">
+                    <strong>4+</strong>
+                    <small>Years Experience</small>
+                </div>
+
+                <div class="stat">
+                    <strong>20+</strong>
+                    <small>Technologies</small>
+                </div>
+
+                <div class="stat">
+                    <strong>∞</strong>
+                    <small>Ideas To Build</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills" class="reveal">
+
+    <h2 class="section-title">
+        Tech <span>Stack</span>
+    </h2>
+
+    <p class="section-description">
+        Modern programming languages and development technologies.
+    </p>
+
+    <div class="skills-grid" id="skillsGrid"></div>
+
+</section>
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services" class="reveal">
+
+    <h2 class="section-title">
+        My <span>Services</span>
+    </h2>
+
+    <p class="section-description">
+        Digital solutions designed around your goals.
+    </p>
+
+    <div class="services-grid">
+
+        <div class="card">
+            <div class="icon">◈</div>
+            <h3>Website Development</h3>
+            <p>
+                Modern, responsive and high-performance websites
+                for businesses and individuals.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">⌘</div>
+            <h3>Web Applications</h3>
+            <p>
+                Custom web applications tailored to specific
+                business requirements.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">✦</div>
+            <h3>UI/UX Design</h3>
+            <p>
+                Attractive, intuitive and modern digital experiences
+                focused on users.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">◇</div>
+            <h3>E-Commerce Solutions</h3>
+            <p>
+                Professional online stores designed to help
+                businesses grow and sell.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">↗</div>
+            <h3>Landing Pages</h3>
+            <p>
+                High-converting landing pages for marketing
+                campaigns and business promotion.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">⚙</div>
+            <h3>Software Development</h3>
+            <p>
+                Custom software solutions designed to solve
+                real-world business challenges.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= COURSES ================= -->
+
+<section id="courses" class="reveal">
+
+    <h2 class="section-title">
+        ALFA <span>Academy</span>
+    </h2>
+
+    <p class="section-description">
+        Learn programming from zero to professional through
+        practical learning and real-world projects.
+    </p>
+
+    <div class="courses-grid">
+
+        <div class="card featured">
+
+            <span class="badge">
+                COMPLETE PACKAGE
+            </span>
+
+            <h3 style="margin-top:15px;">
+                Full Web Development
+            </h3>
+
+            <div class="price">
+                100000
+                <small>IN-PERSON: 100000 DA / 450$</small>
+            </div>
+
+            <ul class="clean-list">
+                <li>Complete Training Program</li>
+                <li>Practical Projects</li>
+                <li>Professional Mentorship</li>
+                <li>Technical Support</li>
+                <li>Certificate Of Completion</li>
+            </ul>
+
+        </div>
+
+        <div class="card">
+
+            <h3>
+                Online Learning
+            </h3>
+
+            <ul class="clean-list">
+
+                <li>Online Courses — 55000 DA / 220$</li>
+                <li>Under ALFA Supervision</li>
+                <li>Live Support</li>
+                <li>Practical Projects</li>
+                <li>Certificate Of Completion</li>
+
+            </ul>
+
+        </div>
+
+        <div class="card">
+
+            <h3>
+                Under ALFA Supervision
+            </h3>
+
+            <p>
+                Practical projects, structured lessons,
+                professional guidance and real-world
+                development workflows.
+            </p>
+
+            <div class="buttons"
+                 style="justify-content:flex-start;">
+
+                <a href="#contact" class="btn">
+                    Ask About Courses
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= WHY ALFA ================= -->
+
+<section class="reveal">
+
+    <h2 class="section-title">
+        Why Choose <span>ALFA?</span>
+    </h2>
+
+    <div class="services-grid">
+
+        <div class="card">
+            <h3>01 — Experience</h3>
+            <p>
+                More than 4 years working with programming
+                and web development.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>02 — Performance</h3>
+            <p>
+                Fast, responsive and scalable digital solutions.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>03 — Design</h3>
+            <p>
+                Strong attention to detail and modern
+                user-centered interfaces.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="reveal">
+
+    <h2 class="section-title">
+        Let's Build <span>Something</span>
+    </h2>
+
+    <p class="section-description">
+        Have an idea? Let's turn it into a professional
+        digital solution.
+    </p>
+
+    <div class="contact-grid">
+
+        <div class="card">
+
+            <h3>
+                Contact ALFA
+            </h3>
+
+            <div class="contact-item">
+
+                <div class="icon">
+                    ✉
+                </div>
+
+                <div>
+                    <b>Email</b>
+                    <span>
+                        fatehyazli5@gmail.com
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="contact-item">
+
+                <div class="icon">
+                    ☎
+                </div>
+
+                <div>
+                    <b>Phone</b>
+                    <span>
+                        0549576176
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <h3>
+                Ready To Start?
+            </h3>
+
+            <p style="margin:15px 0;">
+                Tell me about your website, application,
+                store, software project or design idea.
+            </p>
+
+            <div class="buttons"
+                 style="justify-content:flex-start;">
+
+                <a
+                    class="btn"
+                    href="mailto:fatehyazli5@gmail.com">
+                    Send Email
+                </a>
+
+                <a
+                    class="btn gold"
+                    href="https://wa.me/213549576176">
+                    WhatsApp ALFA
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <strong>
+        YAZLI FATEH | ALFA
+    </strong>
+
+    <br><br>
+
+    Software Developer • Web Developer • UI/UX Designer
+
+    <br><br>
+
+    "Turning Ideas Into Powerful Digital Solutions."
+
+    <br><br>
+
+    © 2026 ALFA — All Rights Reserved.
+
+</footer>
+
+<script>
+
+/* ================= MOBILE MENU ================= */
+
+const menu = document.getElementById("menu");
+const navLinks = document.getElementById("navLinks");
+
+menu.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+});
+
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+    });
+});
+
+
+/* ================= SKILLS ================= */
+
+const skills = [
+
+    ["HTML5",95],
+    ["CSS3",95],
+    ["JavaScript",92],
+    ["TypeScript",86],
+    ["React.js",90],
+    ["Next.js",85],
+    ["Node.js",88],
+    ["PHP",80],
+    ["Python",85],
+    ["Java",78],
+    ["C",80],
+    ["C++",82],
+    ["C#",78],
+    ["SQL",88],
+    ["MongoDB",82],
+    ["Git & GitHub",90],
+    ["Bootstrap",90],
+    ["Tailwind CSS",92],
+    ["UI/UX Design",90]
+
+];
+
+const skillsGrid =
+    document.getElementById("skillsGrid");
+
+skills.forEach(skill => {
+
+    const card = document.createElement("div");
+
+    card.className = "card skill";
+
+    card.innerHTML = `
+        <div class="skill-name">
+            ${skill[0]}
+        </div>
+    `;
+
+    skillsGrid.appendChild(card);
+
+});
+
+
+/* ================= SCROLL REVEAL ================= */
+
+const observer =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if(entry.isIntersecting){
+
+                    entry.target.classList.add("show");
+
+                }
+
+            });
+
+        },
+        {
+            threshold:.12
+        }
+    );
+
+document
+    .querySelectorAll(".reveal")
+    .forEach(element => {
+        observer.observe(element);
+    });
+
+
+/* ================= MOUSE HOLOGRAM LIGHT ================= */
+
+const cursorLight =
+    document.getElementById("cursorLight");
+
+document.addEventListener("mousemove", event => {
+
+    cursorLight.style.left =
+        event.clientX + "px";
+
+    cursorLight.style.top =
+        event.clientY + "px";
+
+});
+
+
+/* ================= PARTICLES ================= */
+
+const canvas =
+    document.getElementById("particles");
+
+const ctx =
+    canvas.getContext("2d");
+
+let width;
+let height;
+let particles = [];
+
+function resizeCanvas(){
+
+    width =
+        canvas.width =
+        window.innerWidth;
+
+    height =
+        canvas.height =
+        window.innerHeight;
+
+}
+
+function createParticles(){
+
+    particles = [];
+
+    for(let i = 0; i < 100; i++){
+
+        particles.push({
+
+            x:Math.random() * width,
+
+            y:Math.random() * height,
+
+            vx:(Math.random() - .5) * .25,
+
+            vy:(Math.random() - .5) * .25,
+
+            radius:Math.random() * 1.5 + .3
+
+        });
+
+    }
+
+}
+
+function animateParticles(){
+
+    ctx.clearRect(
+        0,
+        0,
+        width,
+        height
+    );
+
+    particles.forEach(p => {
+
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if(p.x < 0 || p.x > width){
+            p.vx *= -1;
+        }
+
+        if(p.y < 0 || p.y > height){
+            p.vy *= -1;
+        }
+
+        ctx.beginPath();
+
+        ctx.arc(
+            p.x,
+            p.y,
+            p.radius,
+            0,
+            Math.PI * 2
+        );
+
+        ctx.fillStyle =
+            "rgba(0,245,255,.55)";
+
+        ctx.fill();
+
+    });
+
+    requestAnimationFrame(
+        animateParticles
+    );
+
+}
+
+resizeCanvas();
+createParticles();
+animateParticles();
+
+window.addEventListener(
+    "resize",
+    () => {
+
+        resizeCanvas();
+        createParticles();
+
+    }
+);
+
+
+/* ================= CARD LIGHT ================= */
+
+document
+.querySelectorAll(".card")
+.forEach(card => {
+
+    card.addEventListener(
+        "mousemove",
+        event => {
+
+            const rect =
+                card.getBoundingClientRect();
+
+            const x =
+                event.clientX - rect.left;
+
+            const y =
+                event.clientY - rect.top;
+
+            card.style.background = `
+
+                radial-gradient(
+                    circle at ${x}px ${y}px,
+                    rgba(0,245,255,.11),
+                    rgba(255,255,255,.035) 45%
+                )
+
+            `;
+
+        }
+    );
+
+    card.addEventListener(
+        "mouseleave",
+        () => {
+
+            card.style.background = "";
+
+        }
+    );
+
+});
+
+</script>
+
+</body>
+</html>
