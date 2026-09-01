@@ -7,18 +7,16 @@
 <title>YAZLI FATEH | ALFA</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Michroma:wght@400&display=swap');
 
 :root{
     --bg:#050505;
-    --cyan:#00F5FF;
-    --purple:#7B61FF;
-    --blue:#00A3FF;
-    --gold:#FFD700;
+    --primary-purple:#8A2BE2;
+    --secondary-purple:#B266FF;
     --white:#FFFFFF;
-    --gray:#9da7b3;
+    --gray:#CFCFCF;
     --glass:rgba(255,255,255,.055);
-    --border:rgba(0,245,255,.18);
+    --border:rgba(138,43,226,.18);
 }
 
 *{
@@ -34,7 +32,7 @@ html{
 body{
     background:#050505;
     color:white;
-    font-family:Inter,sans-serif;
+    font-family:Poppins,sans-serif;
     overflow-x:hidden;
 }
 
@@ -52,8 +50,8 @@ body{
     z-index:-4;
     opacity:.13;
     background-image:
-        linear-gradient(rgba(0,245,255,.2) 1px,transparent 1px),
-        linear-gradient(90deg,rgba(123,97,255,.2) 1px,transparent 1px);
+        linear-gradient(rgba(138,43,226,.2) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(178,102,255,.2) 1px,transparent 1px);
     background-size:60px 60px;
     transform:perspective(600px) rotateX(60deg) scale(1.7);
     transform-origin:center bottom;
@@ -76,13 +74,13 @@ body{
 }
 
 .ambient.one{
-    background:var(--cyan);
+    background:var(--primary-purple);
     top:-250px;
     left:-180px;
 }
 
 .ambient.two{
-    background:var(--purple);
+    background:var(--secondary-purple);
     right:-220px;
     bottom:-200px;
 }
@@ -105,20 +103,20 @@ nav{
     justify-content:space-between;
     align-items:center;
     z-index:1000;
-    box-shadow:0 0 35px rgba(0,245,255,.08);
+    box-shadow:0 0 35px rgba(138,43,226,.08);
 }
 
 .logo{
-    font-family:Orbitron;
-    font-weight:800;
+    font-family:Michroma;
+    font-weight:400;
     font-size:20px;
     letter-spacing:3px;
-    color:var(--cyan);
-    text-shadow:0 0 15px var(--cyan);
+    color:var(--primary-purple);
+    text-shadow:0 0 15px var(--primary-purple);
 }
 
 .logo span{
-    color:var(--gold);
+    color:var(--secondary-purple);
 }
 
 nav ul{
@@ -132,11 +130,12 @@ nav a{
     text-decoration:none;
     font-size:13px;
     transition:.3s;
+    font-family:Poppins;
 }
 
 nav a:hover{
-    color:var(--cyan);
-    text-shadow:0 0 12px var(--cyan);
+    color:var(--primary-purple);
+    text-shadow:0 0 12px var(--primary-purple);
 }
 
 .menu{
@@ -156,14 +155,15 @@ section{
 }
 
 .section-title{
-    font-family:Orbitron;
+    font-family:Michroma;
     font-size:clamp(28px,5vw,48px);
     margin-bottom:12px;
+    font-weight:400;
 }
 
 .section-title span{
-    color:var(--cyan);
-    text-shadow:0 0 18px rgba(0,245,255,.5);
+    color:var(--primary-purple);
+    text-shadow:0 0 18px rgba(138,43,226,.5);
 }
 
 .section-description{
@@ -177,7 +177,7 @@ section{
     overflow:hidden;
     padding:28px;
     border-radius:24px;
-    border:1px solid rgba(0,245,255,.14);
+    border:1px solid rgba(138,43,226,.14);
     background:linear-gradient(
         145deg,
         rgba(255,255,255,.075),
@@ -193,9 +193,9 @@ section{
 
 .card:hover{
     transform:translateY(-7px);
-    border-color:rgba(0,245,255,.45);
+    border-color:rgba(138,43,226,.45);
     box-shadow:
-        0 20px 70px rgba(0,245,255,.1),
+        0 20px 70px rgba(138,43,226,.1),
         inset 0 1px rgba(255,255,255,.1);
 }
 
@@ -209,10 +209,10 @@ section{
     background:linear-gradient(
         90deg,
         transparent,
-        var(--cyan),
+        var(--primary-purple),
         transparent
     );
-    box-shadow:0 0 15px var(--cyan);
+    box-shadow:0 0 15px var(--primary-purple);
 }
 
 /* ================= HERO ================= */
@@ -234,28 +234,29 @@ section{
     display:inline-block;
     padding:8px 16px;
     border-radius:50px;
-    border:1px solid rgba(0,245,255,.35);
-    background:rgba(0,245,255,.05);
-    color:var(--cyan);
+    border:1px solid rgba(138,43,226,.35);
+    background:rgba(138,43,226,.05);
+    color:var(--primary-purple);
     font-size:11px;
     letter-spacing:3px;
     text-transform:uppercase;
-    box-shadow:0 0 25px rgba(0,245,255,.08);
+    box-shadow:0 0 25px rgba(138,43,226,.08);
+    font-family:Poppins;
 }
 
 .hero h1{
     margin:25px 0 15px;
-    font-family:Orbitron;
-    font-weight:800;
+    font-family:Michroma;
+    font-weight:400;
     font-size:clamp(48px,9vw,105px);
     letter-spacing:5px;
     line-height:1;
     background:linear-gradient(
         90deg,
         white,
-        var(--cyan),
+        var(--primary-purple),
         white,
-        var(--purple),
+        var(--secondary-purple),
         white
     );
     background-size:300%;
@@ -272,7 +273,7 @@ section{
 }
 
 .hero-subtitle{
-    font-family:Orbitron;
+    font-family:Michroma;
     color:#dbe2e8;
     font-size:clamp(12px,2vw,19px);
     letter-spacing:3px;
@@ -300,25 +301,26 @@ section{
     border-radius:13px;
     text-decoration:none;
     color:white;
-    border:1px solid rgba(0,245,255,.4);
+    border:1px solid rgba(138,43,226,.4);
     background:rgba(255,255,255,.045);
     backdrop-filter:blur(10px);
     transition:.35s;
+    font-family:Poppins;
 }
 
 .btn:hover{
-    color:var(--cyan);
+    color:var(--primary-purple);
     transform:translateY(-3px);
-    box-shadow:0 0 28px rgba(0,245,255,.3);
+    box-shadow:0 0 28px rgba(138,43,226,.3);
 }
 
 .btn.gold{
-    border-color:rgba(255,215,0,.4);
+    border-color:rgba(178,102,255,.4);
 }
 
 .btn.gold:hover{
-    color:var(--gold);
-    box-shadow:0 0 28px rgba(255,215,0,.2);
+    color:var(--secondary-purple);
+    box-shadow:0 0 28px rgba(178,102,255,.2);
 }
 
 /* ================= ABOUT ================= */
@@ -337,7 +339,7 @@ section{
     background:
         radial-gradient(
             circle,
-            rgba(0,245,255,.18),
+            rgba(138,43,226,.18),
             transparent 55%
         );
 }
@@ -346,17 +348,17 @@ section{
     width:155px;
     height:155px;
     border-radius:50%;
-    border:1px solid var(--cyan);
+    border:1px solid var(--primary-purple);
     display:flex;
     justify-content:center;
     align-items:center;
-    color:var(--cyan);
-    font-family:Orbitron;
+    color:var(--primary-purple);
+    font-family:Michroma;
     font-size:42px;
-    font-weight:800;
+    font-weight:400;
     box-shadow:
-        0 0 30px var(--cyan),
-        inset 0 0 30px rgba(0,245,255,.25);
+        0 0 30px var(--primary-purple),
+        inset 0 0 30px rgba(138,43,226,.25);
     animation:pulse 3s infinite;
 }
 
@@ -364,8 +366,8 @@ section{
     50%{
         transform:scale(1.08);
         box-shadow:
-            0 0 70px var(--cyan),
-            inset 0 0 40px rgba(0,245,255,.4);
+            0 0 70px var(--primary-purple),
+            inset 0 0 40px rgba(138,43,226,.4);
     }
 }
 
@@ -383,8 +385,8 @@ section{
 
 .stat strong{
     display:block;
-    color:var(--gold);
-    font-family:Orbitron;
+    color:var(--primary-purple);
+    font-family:Michroma;
     font-size:27px;
 }
 
@@ -405,8 +407,9 @@ section{
 }
 
 .skill-name{
-    font-family:Orbitron;
+    font-family:Michroma;
     font-size:12px;
+    color:var(--white);
 }
 
 .progress{
@@ -415,6 +418,7 @@ section{
     background:#20252b;
     border-radius:20px;
     overflow:hidden;
+    display:none;
 }
 
 .progress span{
@@ -422,10 +426,10 @@ section{
     height:100%;
     background:linear-gradient(
         90deg,
-        var(--cyan),
-        var(--purple)
+        var(--primary-purple),
+        var(--secondary-purple)
     );
-    box-shadow:0 0 12px var(--cyan);
+    box-shadow:0 0 12px var(--primary-purple);
 }
 
 /* ================= SERVICES ================= */
@@ -438,13 +442,13 @@ section{
 
 .icon{
     font-size:32px;
-    color:var(--cyan);
+    color:var(--primary-purple);
     margin-bottom:14px;
-    text-shadow:0 0 18px var(--cyan);
+    text-shadow:0 0 18px var(--primary-purple);
 }
 
 .card h3{
-    font-family:Orbitron;
+    font-family:Michroma;
     font-size:17px;
     margin-bottom:10px;
 }
@@ -463,20 +467,20 @@ section{
 }
 
 .featured{
-    border-color:rgba(255,215,0,.4);
+    border-color:rgba(178,102,255,.4);
 }
 
 .price{
-    color:var(--gold);
-    font-family:Orbitron;
+    color:var(--primary-purple);
+    font-family:Michroma;
     font-size:34px;
-    font-weight:800;
+    font-weight:400;
     margin:18px 0;
 }
 
 .price small{
     color:var(--gray);
-    font-family:Inter;
+    font-family:Poppins;
     font-size:11px;
 }
 
@@ -492,8 +496,158 @@ section{
 
 .clean-list li::before{
     content:"✓";
-    color:var(--cyan);
+    color:var(--primary-purple);
     margin-right:8px;
+}
+
+/* ================= PAYMENT METHODS ================= */
+
+.payment-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.payment-card{
+    padding:28px;
+    border-radius:24px;
+    border:1px solid rgba(138,43,226,.14);
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.075),
+        rgba(255,255,255,.018)
+    );
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.08),
+        0 20px 60px rgba(0,0,0,.3);
+    transition:.4s;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.payment-card::before{
+    content:"";
+    position:absolute;
+    width:150px;
+    height:2px;
+    top:0;
+    left:10%;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        var(--primary-purple),
+        transparent
+    );
+    box-shadow:0 0 15px var(--primary-purple);
+}
+
+.payment-card:hover{
+    transform:translateY(-7px);
+    border-color:rgba(138,43,226,.45);
+    box-shadow:
+        0 20px 70px rgba(138,43,226,.1),
+        inset 0 1px rgba(255,255,255,.1);
+}
+
+.payment-card h3{
+    font-family:Michroma;
+    font-size:18px;
+    color:var(--white);
+    margin-bottom:12px;
+}
+
+.payment-card p{
+    color:var(--gray);
+    font-size:14px;
+}
+
+/* ================= REGISTRATION FORM ================= */
+
+.form-container{
+    max-width:700px;
+    margin:0 auto;
+}
+
+.form-group{
+    margin-bottom:20px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:8px;
+    color:var(--white);
+    font-family:Michroma;
+    font-size:12px;
+    letter-spacing:1px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+    padding:12px 16px;
+    border-radius:12px;
+    border:1px solid rgba(138,43,226,.25);
+    background:rgba(255,255,255,.05);
+    color:white;
+    font-family:Poppins;
+    font-size:14px;
+    backdrop-filter:blur(10px);
+    transition:.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    outline:none;
+    border-color:rgba(138,43,226,.6);
+    background:rgba(255,255,255,.08);
+    box-shadow:0 0 20px rgba(138,43,226,.15);
+}
+
+.form-group select{
+    cursor:pointer;
+}
+
+.form-group select option{
+    background:#050505;
+    color:white;
+}
+
+.form-group textarea{
+    resize:vertical;
+    min-height:100px;
+}
+
+.form-submit{
+    width:100%;
+    padding:14px;
+    border-radius:13px;
+    border:1px solid rgba(138,43,226,.4);
+    background:linear-gradient(
+        135deg,
+        rgba(138,43,226,.2),
+        rgba(178,102,255,.1)
+    );
+    color:var(--primary-purple);
+    font-family:Michroma;
+    font-size:13px;
+    letter-spacing:2px;
+    cursor:pointer;
+    transition:.35s;
+}
+
+.form-submit:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 28px rgba(138,43,226,.3);
+    background:linear-gradient(
+        135deg,
+        rgba(138,43,226,.3),
+        rgba(178,102,255,.2)
+    );
 }
 
 /* ================= CONTACT ================= */
@@ -542,8 +696,8 @@ footer{
 }
 
 footer strong{
-    font-family:Orbitron;
-    color:var(--cyan);
+    font-family:Michroma;
+    color:var(--primary-purple);
     letter-spacing:2px;
 }
 
@@ -575,7 +729,7 @@ footer strong{
     background:
         radial-gradient(
             circle,
-            rgba(0,245,255,.12),
+            rgba(138,43,226,.12),
             transparent 65%
         );
 }
@@ -612,7 +766,8 @@ footer strong{
 
     .skills-grid,
     .services-grid,
-    .courses-grid{
+    .courses-grid,
+    .payment-grid{
         grid-template-columns:1fr 1fr;
     }
 }
@@ -634,7 +789,8 @@ footer strong{
 
     .skills-grid,
     .services-grid,
-    .courses-grid{
+    .courses-grid,
+    .payment-grid{
         grid-template-columns:1fr;
     }
 
@@ -707,7 +863,7 @@ footer strong{
                 Explore My Work
             </a>
 
-            <a href="#contact" class="btn gold">
+            <a href="#register" class="btn gold">
                 Start A Project
             </a>
 
@@ -888,7 +1044,7 @@ footer strong{
         <div class="card featured">
 
             <span class="badge">
-                COMPLETE PACKAGE
+                IN-PERSON COURSE
             </span>
 
             <h3 style="margin-top:15px;">
@@ -896,8 +1052,8 @@ footer strong{
             </h3>
 
             <div class="price">
-                35,000
-                <small>DZD / PACKAGE</small>
+                87,000
+                <small>DA / 350$</small>
             </div>
 
             <ul class="clean-list">
@@ -910,20 +1066,27 @@ footer strong{
 
         </div>
 
-        <div class="card">
+        <div class="card featured">
 
-            <h3>
-                Programming Packages
+            <span class="badge">
+                ONLINE RECORDED COURSE
+            </span>
+
+            <h3 style="margin-top:15px;">
+                Full Web Development
             </h3>
 
+            <div class="price">
+                50,000
+                <small>DA / 220$</small>
+            </div>
+
             <ul class="clean-list">
-
-                <li>Java Programming</li>
-                <li>Python Programming</li>
-                <li>JavaScript Programming</li>
-                <li>C++ Programming</li>
-                <li>UI/UX Design</li>
-
+                <li>Complete Training Program</li>
+                <li>Practical Projects</li>
+                <li>Professional Mentorship</li>
+                <li>Technical Support</li>
+                <li>Certificate Of Completion</li>
             </ul>
 
         </div>
@@ -943,7 +1106,7 @@ footer strong{
             <div class="buttons"
                  style="justify-content:flex-start;">
 
-                <a href="#contact" class="btn">
+                <a href="#register" class="btn">
                     Ask About Courses
                 </a>
 
@@ -992,6 +1155,94 @@ footer strong{
 
 </section>
 
+<!-- ================= PAYMENT METHODS ================= -->
+
+<section class="reveal">
+
+    <h2 class="section-title">
+        Payment <span>Methods</span>
+    </h2>
+
+    <p class="section-description">
+        Secure and convenient payment options for your courses and services.
+    </p>
+
+    <div class="payment-grid">
+
+        <div class="payment-card">
+            <h3>BaridiMob</h3>
+            <p>Fast and secure mobile payment solution for Algerian customers.</p>
+        </div>
+
+        <div class="payment-card">
+            <h3>Binance</h3>
+            <p>Leading cryptocurrency exchange for digital asset payments.</p>
+        </div>
+
+        <div class="payment-card">
+            <h3>Bybit</h3>
+            <p>Professional cryptocurrency trading and payment platform.</p>
+        </div>
+
+        <div class="payment-card">
+            <h3>International Bank Transfer</h3>
+            <p>Secure international wire transfers for global payments.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= REGISTRATION FORM ================= -->
+
+<section id="register" class="reveal">
+
+    <h2 class="section-title">
+        Register <span>Now</span>
+    </h2>
+
+    <p class="section-description">
+        Fill out the form below to get started with your project or course.
+    </p>
+
+    <div class="form-container">
+        <form id="registrationForm">
+
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Your Full Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Your Phone Number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="serviceSelection">Service Selection</label>
+                <select id="serviceSelection" name="serviceSelection" required>
+                    <option value="">Choose a service...</option>
+                    <option value="In-Person Course — 87000 DA / 350$">In-Person Course — 87000 DA / 350$</option>
+                    <option value="Recorded Online Course — 50000 DA / 220$">Recorded Online Course — 50000 DA / 220$</option>
+                    <option value="Website Development">Website Development</option>
+                    <option value="Web Application Development">Web Application Development</option>
+                    <option value="UI/UX Design">UI/UX Design</option>
+                    <option value="Software Development">Software Development</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell us about your project or course interest..." required></textarea>
+            </div>
+
+            <button type="submit" class="form-submit">SUBMIT REQUEST</button>
+
+        </form>
+    </div>
+
+</section>
+
 <!-- ================= CONTACT ================= -->
 
 <section id="contact" class="reveal">
@@ -1001,78 +1252,25 @@ footer strong{
     </h2>
 
     <p class="section-description">
-        Have an idea? Let's turn it into a professional
-        digital solution.
+        Get in touch and let's create something amazing together.
     </p>
 
     <div class="contact-grid">
 
-        <div class="card">
-
-            <h3>
-                Contact ALFA
-            </h3>
-
-            <div class="contact-item">
-
-                <div class="icon">
-                    ✉
-                </div>
-
-                <div>
-                    <b>Email</b>
-                    <span>
-                        fatehyazli5@gmail.com
-                    </span>
-                </div>
-
+        <div class="contact-item">
+            <div class="icon">💬</div>
+            <div>
+                <b>WhatsApp</b>
+                <span><a href="https://wa.me/213694203333" style="color:var(--gray); text-decoration:none;">+213 694 203 333</a></span>
             </div>
-
-            <div class="contact-item">
-
-                <div class="icon">
-                    ☎
-                </div>
-
-                <div>
-                    <b>Phone</b>
-                    <span>
-                        0549576176
-                    </span>
-                </div>
-
-            </div>
-
         </div>
 
-        <div class="card">
-
-            <h3>
-                Ready To Start?
-            </h3>
-
-            <p style="margin:15px 0;">
-                Tell me about your website, application,
-                store, software project or design idea.
-            </p>
-
-            <div class="buttons"
-                 style="justify-content:flex-start;">
-
-                <a
-                    class="btn"
-                    href="mailto:fatehyazli5@gmail.com">
-                    Send Email
-                </a>
-
-                <a
-                    class="btn gold"
-                    href="tel:0549576176">
-                    Call ALFA
-                </a>
-
+        <div class="contact-item">
+            <div class="icon">✉️</div>
+            <div>
+                <b>Email</b>
+                <span><a href="mailto:yazli.fateh@gmail.com" style="color:var(--gray); text-decoration:none;">yazli.fateh@gmail.com</a></span>
             </div>
-
         </div>
 
     </div>
@@ -1082,292 +1280,156 @@ footer strong{
 <!-- ================= FOOTER ================= -->
 
 <footer>
-
-    <strong>
-        YAZLI FATEH | ALFA
-    </strong>
-
-    <br><br>
-
-    Software Developer • Web Developer • UI/UX Designer
-
-    <br><br>
-
-    "Turning Ideas Into Powerful Digital Solutions."
-
-    <br><br>
-
-    © 2026 ALFA — All Rights Reserved.
-
+    <p>&copy; 2024 <strong>ALFA</strong> • All rights reserved. Building the future, one project at a time.</p>
 </footer>
 
 <script>
 
-/* ================= MOBILE MENU ================= */
+// ================= PARTICLES ================= 
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
 
-const menu = document.getElementById("menu");
-const navLinks = document.getElementById("navLinks");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-menu.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-});
-
-document.querySelectorAll("nav a").forEach(link => {
-    link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
-    });
-});
-
-
-/* ================= SKILLS ================= */
-
-const skills = [
-
-    ["HTML5",95],
-    ["CSS3",95],
-    ["JavaScript",92],
-    ["TypeScript",86],
-    ["React.js",90],
-    ["Next.js",85],
-    ["Node.js",88],
-    ["PHP",80],
-    ["Python",85],
-    ["Java",78],
-    ["C",80],
-    ["C++",82],
-    ["C#",78],
-    ["SQL",88],
-    ["MongoDB",82],
-    ["Git & GitHub",90],
-    ["Bootstrap",90],
-    ["Tailwind CSS",92],
-    ["UI/UX Design",90]
-
-];
-
-const skillsGrid =
-    document.getElementById("skillsGrid");
-
-skills.forEach(skill => {
-
-    const card = document.createElement("div");
-
-    card.className = "card skill";
-
-    card.innerHTML = `
-
-        <div class="skill-name">
-            ${skill[0]}
-        </div>
-
-        <div class="progress">
-            <span style="width:${skill[1]}%"></span>
-        </div>
-
-    `;
-
-    skillsGrid.appendChild(card);
-
-});
-
-
-/* ================= SCROLL REVEAL ================= */
-
-const observer =
-    new IntersectionObserver(
-        entries => {
-
-            entries.forEach(entry => {
-
-                if(entry.isIntersecting){
-
-                    entry.target.classList.add("show");
-
-                }
-
-            });
-
-        },
-        {
-            threshold:.12
-        }
-    );
-
-document
-    .querySelectorAll(".reveal")
-    .forEach(element => {
-        observer.observe(element);
-    });
-
-
-/* ================= MOUSE HOLOGRAM LIGHT ================= */
-
-const cursorLight =
-    document.getElementById("cursorLight");
-
-document.addEventListener("mousemove", event => {
-
-    cursorLight.style.left =
-        event.clientX + "px";
-
-    cursorLight.style.top =
-        event.clientY + "px";
-
-});
-
-
-/* ================= PARTICLES ================= */
-
-const canvas =
-    document.getElementById("particles");
-
-const ctx =
-    canvas.getContext("2d");
-
-let width;
-let height;
 let particles = [];
 
-function resizeCanvas(){
-
-    width =
-        canvas.width =
-        window.innerWidth;
-
-    height =
-        canvas.height =
-        window.innerHeight;
-
-}
-
-function createParticles(){
-
-    particles = [];
-
-    for(let i = 0; i < 100; i++){
-
-        particles.push({
-
-            x:Math.random() * width,
-
-            y:Math.random() * height,
-
-            vx:(Math.random() - .5) * .25,
-
-            vy:(Math.random() - .5) * .25,
-
-            radius:Math.random() * 1.5 + .3
-
-        });
-
+class Particle {
+    constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 0.5;
+        this.speedX = Math.random() * 1 - 0.5;
+        this.speedY = Math.random() * 1 - 0.5;
+        this.opacity = Math.random() * 0.5 + 0.2;
     }
 
-}
+    update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        
+        if (this.x > canvas.width) this.x = 0;
+        if (this.x < 0) this.x = canvas.width;
+        if (this.y > canvas.height) this.y = 0;
+        if (this.y < 0) this.y = canvas.height;
+    }
 
-function animateParticles(){
-
-    ctx.clearRect(
-        0,
-        0,
-        width,
-        height
-    );
-
-    particles.forEach(p => {
-
-        p.x += p.vx;
-        p.y += p.vy;
-
-        if(p.x < 0 || p.x > width){
-            p.vx *= -1;
-        }
-
-        if(p.y < 0 || p.y > height){
-            p.vy *= -1;
-        }
-
+    draw() {
+        ctx.fillStyle = `rgba(138, 43, 226, ${this.opacity})`;
         ctx.beginPath();
-
-        ctx.arc(
-            p.x,
-            p.y,
-            p.radius,
-            0,
-            Math.PI * 2
-        );
-
-        ctx.fillStyle =
-            "rgba(0,245,255,.55)";
-
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
-
-    });
-
-    requestAnimationFrame(
-        animateParticles
-    );
-
+    }
 }
 
-resizeCanvas();
-createParticles();
+for (let i = 0; i < 100; i++) {
+    particles.push(new Particle());
+}
+
+function animateParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    particles.forEach(particle => {
+        particle.update();
+        particle.draw();
+    });
+    
+    requestAnimationFrame(animateParticles);
+}
+
 animateParticles();
 
-window.addEventListener(
-    "resize",
-    () => {
+window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
 
-        resizeCanvas();
-        createParticles();
+// ================= SKILLS ================= 
 
-    }
-);
+const skills = [
+    'JavaScript', 'Python', 'Java', 'C++', 'React', 'Vue.js',
+    'Node.js', 'Django', 'MongoDB', 'PostgreSQL', 'CSS', 'HTML',
+    'Git', 'Docker', 'AWS', 'Firebase', 'TypeScript', 'Next.js',
+    'GraphQL', 'REST API'
+];
 
+const skillsGrid = document.getElementById('skillsGrid');
 
-/* ================= CARD LIGHT ================= */
+skills.forEach(skill => {
+    const skillCard = document.createElement('div');
+    skillCard.className = 'card skill';
+    
+    const skillName = document.createElement('div');
+    skillName.className = 'skill-name';
+    skillName.textContent = skill;
+    
+    skillCard.appendChild(skillName);
+    skillsGrid.appendChild(skillCard);
+});
 
-document
-.querySelectorAll(".card")
-.forEach(card => {
+// ================= MENU ================= 
 
-    card.addEventListener(
-        "mousemove",
-        event => {
+const menu = document.getElementById('menu');
+const navLinks = document.getElementById('navLinks');
 
-            const rect =
-                card.getBoundingClientRect();
+menu.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+});
 
-            const x =
-                event.clientX - rect.left;
+document.querySelectorAll('#navLinks a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+    });
+});
 
-            const y =
-                event.clientY - rect.top;
+// ================= SCROLL REVEAL ================= 
 
-            card.style.background = `
+const revealElements = document.querySelectorAll('.reveal');
 
-                radial-gradient(
-                    circle at ${x}px ${y}px,
-                    rgba(0,245,255,.11),
-                    rgba(255,255,255,.035) 45%
-                )
-
-            `;
-
+const revealOnScroll = () => {
+    revealElements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementTop < window.innerHeight - elementVisible) {
+            element.classList.add('show');
         }
-    );
+    });
+};
 
-    card.addEventListener(
-        "mouseleave",
-        () => {
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
 
-            card.style.background = "";
+// ================= CURSOR LIGHT ================= 
 
-        }
-    );
+const cursorLight = document.getElementById('cursorLight');
 
+document.addEventListener('mousemove', (e) => {
+    cursorLight.style.left = e.clientX + 'px';
+    cursorLight.style.top = e.clientY + 'px';
+});
+
+// ================= FORM SUBMISSION ================= 
+
+const registrationForm = document.getElementById('registrationForm');
+
+registrationForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const fullName = document.getElementById('fullName').value;
+    const phoneNumber = document.getElementById('phoneNumber').value;
+    const serviceSelection = document.getElementById('serviceSelection').value;
+    const message = document.getElementById('message').value;
+    
+    const whatsappMessage = `Hello ALFA, I would like to inquire about your services.%0A%0AName: ${fullName}%0APhone: ${phoneNumber}%0AService: ${serviceSelection}%0AMessage: ${message}`;
+    
+    window.open(`https://wa.me/213694203333?text=${whatsappMessage}`, '_blank');
+    
+    registrationForm.reset();
 });
 
 </script>
 
 </body>
+
 </html>
