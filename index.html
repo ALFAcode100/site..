@@ -4,19 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="YAZLI FATEH | ALFA - Software Developer, Web Developer & UI/UX Designer">
-<title>YAZLI FATEH | ALFA.CÔDE</title>
+<title>YAZLI FATEH | ALFA</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Michroma:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800&display=swap');
 
 :root{
     --bg:#050505;
-    --primary-purple:#8A2BE2;
-    --secondary-purple:#B266FF;
+    --cyan:#00F5FF;
+    --purple:#7B61FF;
+    --blue:#00A3FF;
+    --gold:#FFD700;
     --white:#FFFFFF;
-    --gray:#CFCFCF;
-    --glass:rgba(138,43,226,.06);
-    --border:rgba(138,43,226,.28);
+    --gray:#9da7b3;
+    --glass:rgba(255,255,255,.055);
+    --border:rgba(0,245,255,.18);
 }
 
 *{
@@ -32,7 +34,7 @@ html{
 body{
     background:#050505;
     color:white;
-    font-family:Poppins,sans-serif;
+    font-family:Inter,sans-serif;
     overflow-x:hidden;
 }
 
@@ -50,8 +52,8 @@ body{
     z-index:-4;
     opacity:.13;
     background-image:
-        linear-gradient(rgba(138,43,226,.2) 1px,transparent 1px),
-        linear-gradient(90deg,rgba(178,102,255,.2) 1px,transparent 1px);
+        linear-gradient(rgba(0,245,255,.2) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(123,97,255,.2) 1px,transparent 1px);
     background-size:60px 60px;
     transform:perspective(600px) rotateX(60deg) scale(1.7);
     transform-origin:center bottom;
@@ -74,13 +76,13 @@ body{
 }
 
 .ambient.one{
-    background:var(--primary-purple);
+    background:var(--cyan);
     top:-250px;
     left:-180px;
 }
 
 .ambient.two{
-    background:var(--secondary-purple);
+    background:var(--purple);
     right:-220px;
     bottom:-200px;
 }
@@ -103,20 +105,20 @@ nav{
     justify-content:space-between;
     align-items:center;
     z-index:1000;
-    box-shadow:0 0 35px rgba(138,43,226,.08);
+    box-shadow:0 0 35px rgba(0,245,255,.08);
 }
 
 .logo{
-    font-family:Michroma;
-    font-weight:400;
+    font-family:Orbitron;
+    font-weight:800;
     font-size:20px;
     letter-spacing:3px;
-    color:var(--primary-purple);
-    text-shadow:0 0 15px var(--primary-purple);
+    color:var(--cyan);
+    text-shadow:0 0 15px var(--cyan);
 }
 
 .logo span{
-    color:var(--secondary-purple);
+    color:var(--gold);
 }
 
 nav ul{
@@ -133,8 +135,8 @@ nav a{
 }
 
 nav a:hover{
-    color:var(--primary-purple);
-    text-shadow:0 0 12px var(--primary-purple);
+    color:var(--cyan);
+    text-shadow:0 0 12px var(--cyan);
 }
 
 .menu{
@@ -154,14 +156,14 @@ section{
 }
 
 .section-title{
-    font-family:Michroma;
+    font-family:Orbitron;
     font-size:clamp(28px,5vw,48px);
     margin-bottom:12px;
 }
 
 .section-title span{
-    color:var(--primary-purple);
-    text-shadow:0 0 18px rgba(138,43,226,.5);
+    color:var(--cyan);
+    text-shadow:0 0 18px rgba(0,245,255,.5);
 }
 
 .section-description{
@@ -175,11 +177,11 @@ section{
     overflow:hidden;
     padding:28px;
     border-radius:24px;
-    border:1px solid rgba(138,43,226,.14);
+    border:1px solid rgba(0,245,255,.14);
     background:linear-gradient(
         145deg,
-        rgba(138,43,226,.075),
-        rgba(138,43,226,.018)
+        rgba(255,255,255,.075),
+        rgba(255,255,255,.018)
     );
     backdrop-filter:blur(18px);
     -webkit-backdrop-filter:blur(18px);
@@ -191,9 +193,9 @@ section{
 
 .card:hover{
     transform:translateY(-7px);
-    border-color:rgba(138,43,226,.45);
+    border-color:rgba(0,245,255,.45);
     box-shadow:
-        0 20px 70px rgba(138,43,226,.1),
+        0 20px 70px rgba(0,245,255,.1),
         inset 0 1px rgba(255,255,255,.1);
 }
 
@@ -207,10 +209,10 @@ section{
     background:linear-gradient(
         90deg,
         transparent,
-        var(--primary-purple),
+        var(--cyan),
         transparent
     );
-    box-shadow:0 0 15px var(--primary-purple);
+    box-shadow:0 0 15px var(--cyan);
 }
 
 /* ================= HERO ================= */
@@ -232,28 +234,28 @@ section{
     display:inline-block;
     padding:8px 16px;
     border-radius:50px;
-    border:1px solid rgba(138,43,226,.35);
-    background:rgba(138,43,226,.05);
-    color:var(--primary-purple);
+    border:1px solid rgba(0,245,255,.35);
+    background:rgba(0,245,255,.05);
+    color:var(--cyan);
     font-size:11px;
     letter-spacing:3px;
     text-transform:uppercase;
-    box-shadow:0 0 25px rgba(138,43,226,.08);
+    box-shadow:0 0 25px rgba(0,245,255,.08);
 }
 
 .hero h1{
     margin:25px 0 15px;
-    font-family:Michroma;
-    font-weight:400;
+    font-family:Orbitron;
+    font-weight:800;
     font-size:clamp(48px,9vw,105px);
     letter-spacing:5px;
     line-height:1;
     background:linear-gradient(
         90deg,
         white,
-        var(--primary-purple),
+        var(--cyan),
         white,
-        var(--secondary-purple),
+        var(--purple),
         white
     );
     background-size:300%;
@@ -270,7 +272,7 @@ section{
 }
 
 .hero-subtitle{
-    font-family:Michroma;
+    font-family:Orbitron;
     color:#dbe2e8;
     font-size:clamp(12px,2vw,19px);
     letter-spacing:3px;
@@ -298,26 +300,25 @@ section{
     border-radius:13px;
     text-decoration:none;
     color:white;
-    border:1px solid rgba(138,43,226,.4);
-    background:rgba(138,43,226,.045);
+    border:1px solid rgba(0,245,255,.4);
+    background:rgba(255,255,255,.045);
     backdrop-filter:blur(10px);
     transition:.35s;
-    font-family:Poppins;
 }
 
 .btn:hover{
-    color:var(--primary-purple);
+    color:var(--cyan);
     transform:translateY(-3px);
-    box-shadow:0 0 28px rgba(138,43,226,.3);
+    box-shadow:0 0 28px rgba(0,245,255,.3);
 }
 
 .btn.gold{
-    border-color:rgba(178,102,255,.4);
+    border-color:rgba(255,215,0,.4);
 }
 
 .btn.gold:hover{
-    color:var(--secondary-purple);
-    box-shadow:0 0 28px rgba(178,102,255,.2);
+    color:var(--gold);
+    box-shadow:0 0 28px rgba(255,215,0,.2);
 }
 
 /* ================= ABOUT ================= */
@@ -336,7 +337,7 @@ section{
     background:
         radial-gradient(
             circle,
-            rgba(138,43,226,.18),
+            rgba(0,245,255,.18),
             transparent 55%
         );
 }
@@ -345,17 +346,17 @@ section{
     width:155px;
     height:155px;
     border-radius:50%;
-    border:1px solid var(--primary-purple);
+    border:1px solid var(--cyan);
     display:flex;
     justify-content:center;
     align-items:center;
-    color:var(--primary-purple);
-    font-family:Michroma;
+    color:var(--cyan);
+    font-family:Orbitron;
     font-size:42px;
-    font-weight:400;
+    font-weight:800;
     box-shadow:
-        0 0 30px var(--primary-purple),
-        inset 0 0 30px rgba(138,43,226,.25);
+        0 0 30px var(--cyan),
+        inset 0 0 30px rgba(0,245,255,.25);
     animation:pulse 3s infinite;
 }
 
@@ -363,18 +364,14 @@ section{
     50%{
         transform:scale(1.08);
         box-shadow:
-            0 0 70px var(--primary-purple),
-            inset 0 0 40px rgba(138,43,226,.4);
+            0 0 70px var(--cyan),
+            inset 0 0 40px rgba(0,245,255,.4);
     }
 }
 
 .about-text p{
     color:var(--gray);
     margin-bottom:15px;
-}
-
-.about-text h3{
-    font-family:Michroma;
 }
 
 .stats{
@@ -386,8 +383,8 @@ section{
 
 .stat strong{
     display:block;
-    color:var(--primary-purple);
-    font-family:Michroma;
+    color:var(--gold);
+    font-family:Orbitron;
     font-size:27px;
 }
 
@@ -399,64 +396,36 @@ section{
 
 .skills-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    grid-template-columns:repeat(3,1fr);
     gap:15px;
 }
 
 .skill{
-    padding:18px;
-    min-height:90px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    position:relative;
-    overflow:hidden;
-    border-radius:24px;
-    border:1px solid rgba(138,43,226,.14);
-    background:linear-gradient(
-        145deg,
-        rgba(138,43,226,.075),
-        rgba(138,43,226,.018)
-    );
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
-    box-shadow:
-        inset 0 1px rgba(255,255,255,.08),
-        0 20px 60px rgba(0,0,0,.3);
-    transition:.4s;
-}
-
-.skill::before{
-    content:"";
-    position:absolute;
-    width:150px;
-    height:2px;
-    top:0;
-    left:10%;
-    background:linear-gradient(
-        90deg,
-        transparent,
-        var(--primary-purple),
-        transparent
-    );
-    box-shadow:0 0 15px var(--primary-purple);
-}
-
-.skill:hover{
-    transform:translateY(-7px);
-    border-color:rgba(138,43,226,.45);
-    box-shadow:
-        0 20px 70px rgba(138,43,226,.1),
-        inset 0 1px rgba(255,255,255,.1);
+    padding:19px;
 }
 
 .skill-name{
-    font-family:Poppins;
-    font-size:16px;
-    font-weight:500;
-    color:white;
-    text-shadow:0 0 12px rgba(138,43,226,.5);
+    font-family:Orbitron;
+    font-size:12px;
+}
+
+.progress{
+    height:4px;
+    margin-top:12px;
+    background:#20252b;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress span{
+    display:block;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        var(--cyan),
+        var(--purple)
+    );
+    box-shadow:0 0 12px var(--cyan);
 }
 
 /* ================= SERVICES ================= */
@@ -469,13 +438,13 @@ section{
 
 .icon{
     font-size:32px;
-    color:var(--primary-purple);
+    color:var(--cyan);
     margin-bottom:14px;
-    text-shadow:0 0 18px var(--primary-purple);
+    text-shadow:0 0 18px var(--cyan);
 }
 
 .card h3{
-    font-family:Michroma;
+    font-family:Orbitron;
     font-size:17px;
     margin-bottom:10px;
 }
@@ -494,20 +463,20 @@ section{
 }
 
 .featured{
-    border-color:rgba(138,43,226,.4);
+    border-color:rgba(255,215,0,.4);
 }
 
 .price{
-    color:var(--primary-purple);
-    font-family:Michroma;
+    color:var(--gold);
+    font-family:Orbitron;
     font-size:34px;
-    font-weight:400;
+    font-weight:800;
     margin:18px 0;
 }
 
 .price small{
     color:var(--gray);
-    font-family:Poppins;
+    font-family:Inter;
     font-size:11px;
 }
 
@@ -523,147 +492,8 @@ section{
 
 .clean-list li::before{
     content:"✓";
-    color:var(--primary-purple);
+    color:var(--cyan);
     margin-right:8px;
-}
-
-/* ================= PAYMENT METHODS ================= */
-
-.payment-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:17px;
-}
-
-.payment-card{
-    position:relative;
-    overflow:hidden;
-    padding:28px;
-    border-radius:24px;
-    border:1px solid rgba(138,43,226,.14);
-    background:linear-gradient(
-        145deg,
-        rgba(138,43,226,.075),
-        rgba(138,43,226,.018)
-    );
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
-    box-shadow:
-        inset 0 1px rgba(255,255,255,.08),
-        0 20px 60px rgba(0,0,0,.3);
-    transition:.4s;
-    text-align:center;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    min-height:180px;
-}
-
-.payment-card::before{
-    content:"";
-    position:absolute;
-    width:150px;
-    height:2px;
-    top:0;
-    left:10%;
-    background:linear-gradient(
-        90deg,
-        transparent,
-        var(--primary-purple),
-        transparent
-    );
-    box-shadow:0 0 15px var(--primary-purple);
-}
-
-.payment-card:hover{
-    transform:translateY(-7px);
-    border-color:rgba(138,43,226,.45);
-    box-shadow:
-        0 20px 70px rgba(138,43,226,.1),
-        inset 0 1px rgba(255,255,255,.1);
-}
-
-.payment-icon{
-    font-size:40px;
-    margin-bottom:12px;
-}
-
-.payment-card h3{
-    font-family:Michroma;
-    font-size:16px;
-    color:white;
-}
-
-/* ================= REGISTRATION FORM ================= */
-
-.form-container{
-    max-width:700px;
-    margin:0 auto;
-}
-
-.form-group{
-    margin-bottom:20px;
-}
-
-.form-group label{
-    display:block;
-    font-family:Poppins;
-    font-weight:500;
-    margin-bottom:8px;
-    color:white;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea{
-    width:100%;
-    padding:12px 16px;
-    border:1px solid rgba(138,43,226,.28);
-    border-radius:13px;
-    background:rgba(138,43,226,.05);
-    backdrop-filter:blur(10px);
-    color:white;
-    font-family:Poppins;
-    font-size:14px;
-    transition:.3s;
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder{
-    color:rgba(207,207,207,.5);
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus{
-    outline:none;
-    border-color:rgba(138,43,226,.45);
-    box-shadow:0 0 15px rgba(138,43,226,.2);
-}
-
-.form-group input option{
-    background:#050505;
-    color:white;
-}
-
-.form-submit{
-    width:100%;
-    padding:13px 23px;
-    border:1px solid rgba(138,43,226,.4);
-    border-radius:13px;
-    background:linear-gradient(135deg,var(--primary-purple),var(--secondary-purple));
-    color:white;
-    font-family:Poppins;
-    font-weight:600;
-    font-size:16px;
-    cursor:pointer;
-    transition:.35s;
-}
-
-.form-submit:hover{
-    transform:translateY(-3px);
-    box-shadow:0 0 28px rgba(138,43,226,.3);
 }
 
 /* ================= CONTACT ================= */
@@ -681,14 +511,13 @@ section{
     margin-top:13px;
     padding:16px;
     border-radius:15px;
-    border:1px solid rgba(138,43,226,.14);
-    background:rgba(138,43,226,.025);
+    border:1px solid rgba(255,255,255,.08);
+    background:rgba(255,255,255,.025);
 }
 
 .contact-item .icon{
     margin:0;
     font-size:25px;
-    color:var(--primary-purple);
 }
 
 .contact-item b{
@@ -707,14 +536,14 @@ section{
 footer{
     text-align:center;
     padding:50px 20px;
-    border-top:1px solid rgba(138,43,226,.14);
+    border-top:1px solid rgba(255,255,255,.08);
     color:var(--gray);
     font-size:13px;
 }
 
 footer strong{
-    font-family:Michroma;
-    color:var(--primary-purple);
+    font-family:Orbitron;
+    color:var(--cyan);
     letter-spacing:2px;
 }
 
@@ -746,7 +575,7 @@ footer strong{
     background:
         radial-gradient(
             circle,
-            rgba(138,43,226,.12),
+            rgba(0,245,255,.12),
             transparent 65%
         );
 }
@@ -783,8 +612,7 @@ footer strong{
 
     .skills-grid,
     .services-grid,
-    .courses-grid,
-    .payment-grid{
+    .courses-grid{
         grid-template-columns:1fr 1fr;
     }
 }
@@ -806,8 +634,7 @@ footer strong{
 
     .skills-grid,
     .services-grid,
-    .courses-grid,
-    .payment-grid{
+    .courses-grid{
         grid-template-columns:1fr;
     }
 
@@ -832,7 +659,7 @@ footer strong{
 <nav>
 
     <div class="logo">
-        ACADEMY.ALFA<span>_</span>
+        ALFA<span>_</span>
     </div>
 
     <button class="menu" id="menu">
@@ -845,7 +672,6 @@ footer strong{
         <li><a href="#skills">Skills</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#courses">Courses</a></li>
-        <li><a href="#register">Register</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 
@@ -907,8 +733,7 @@ footer strong{
 
         <div class="card hologram">
             <div class="orb">
-            👨🏻‍💻
-
+                A
             </div>
         </div>
 
@@ -998,19 +823,168 @@ footer strong{
 
         <div class="card">
             <div class="icon">⌘</div>
-            <h3>App Development</h3>
+            <h3>Web Applications</h3>
             <p>
-                Mobile and desktop applications with clean architecture
-                and efficient performance.
+                Custom web applications tailored to specific
+                business requirements.
             </p>
         </div>
 
         <div class="card">
             <div class="icon">✦</div>
-            <h3>UI / UX Design</h3>
+            <h3>UI/UX Design</h3>
             <p>
-                User-centered interfaces and design systems that look great
-                and work smoothly.
+                Attractive, intuitive and modern digital experiences
+                focused on users.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">◇</div>
+            <h3>E-Commerce Solutions</h3>
+            <p>
+                Professional online stores designed to help
+                businesses grow and sell.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">↗</div>
+            <h3>Landing Pages</h3>
+            <p>
+                High-converting landing pages for marketing
+                campaigns and business promotion.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">⚙</div>
+            <h3>Software Development</h3>
+            <p>
+                Custom software solutions designed to solve
+                real-world business challenges.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= COURSES ================= -->
+
+<section id="courses" class="reveal">
+
+    <h2 class="section-title">
+        ALFA <span>Academy</span>
+    </h2>
+
+    <p class="section-description">
+        Learn programming from zero to professional through
+        practical learning and real-world projects.
+    </p>
+
+    <div class="courses-grid">
+
+        <div class="card featured">
+
+            <span class="badge">
+                COMPLETE PACKAGE
+            </span>
+
+            <h3 style="margin-top:15px;">
+                Full Web Development
+            </h3>
+
+            <div class="price">
+                35,000
+                <small>DZD / PACKAGE</small>
+            </div>
+
+            <ul class="clean-list">
+                <li>Complete Training Program</li>
+                <li>Practical Projects</li>
+                <li>Professional Mentorship</li>
+                <li>Technical Support</li>
+                <li>Certificate Of Completion</li>
+            </ul>
+
+        </div>
+
+        <div class="card">
+
+            <h3>
+                Programming Packages
+            </h3>
+
+            <ul class="clean-list">
+
+                <li>Java Programming</li>
+                <li>Python Programming</li>
+                <li>JavaScript Programming</li>
+                <li>C++ Programming</li>
+                <li>UI/UX Design</li>
+
+            </ul>
+
+        </div>
+
+        <div class="card">
+
+            <h3>
+                Learning Method
+            </h3>
+
+            <p>
+                Practical projects, structured lessons,
+                professional guidance and real-world
+                development workflows.
+            </p>
+
+            <div class="buttons"
+                 style="justify-content:flex-start;">
+
+                <a href="#contact" class="btn">
+                    Ask About Courses
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= WHY ALFA ================= -->
+
+<section class="reveal">
+
+    <h2 class="section-title">
+        Why Choose <span>ALFA?</span>
+    </h2>
+
+    <div class="services-grid">
+
+        <div class="card">
+            <h3>01 — Experience</h3>
+            <p>
+                More than 4 years working with programming
+                and web development.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>02 — Performance</h3>
+            <p>
+                Fast, responsive and scalable digital solutions.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>03 — Design</h3>
+            <p>
+                Strong attention to detail and modern
+                user-centered interfaces.
             </p>
         </div>
 
@@ -1023,29 +997,82 @@ footer strong{
 <section id="contact" class="reveal">
 
     <h2 class="section-title">
-        Get <span>In Touch</span>
+        Let's Build <span>Something</span>
     </h2>
 
     <p class="section-description">
-        For project inquiries, collaboration or questions — reach out.
+        Have an idea? Let's turn it into a professional
+        digital solution.
     </p>
 
     <div class="contact-grid">
 
-        <div class="contact-item">
-            <div class="icon">✉️</div>
-            <div>
-                <b>Email</b>
-                <span>info@alfa-academy.com</span>
+        <div class="card">
+
+            <h3>
+                Contact ALFA
+            </h3>
+
+            <div class="contact-item">
+
+                <div class="icon">
+                    ✉
+                </div>
+
+                <div>
+                    <b>Email</b>
+                    <span>
+                        fatehyazli5@gmail.com
+                    </span>
+                </div>
+
             </div>
+
+            <div class="contact-item">
+
+                <div class="icon">
+                    ☎
+                </div>
+
+                <div>
+                    <b>Phone</b>
+                    <span>
+                        0549576176
+                    </span>
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="contact-item">
-            <div class="icon">📍</div>
-            <div>
-                <b>Location</b>
-                <span>Tunisia</span>
+        <div class="card">
+
+            <h3>
+                Ready To Start?
+            </h3>
+
+            <p style="margin:15px 0;">
+                Tell me about your website, application,
+                store, software project or design idea.
+            </p>
+
+            <div class="buttons"
+                 style="justify-content:flex-start;">
+
+                <a
+                    class="btn"
+                    href="mailto:fatehyazli5@gmail.com">
+                    Send Email
+                </a>
+
+                <a
+                    class="btn gold"
+                    href="tel:0549576176">
+                    Call ALFA
+                </a>
+
             </div>
+
         </div>
 
     </div>
@@ -1055,22 +1082,291 @@ footer strong{
 <!-- ================= FOOTER ================= -->
 
 <footer>
-    <strong>ACADEMY.ALFA</strong>
-    <div>info@alfa-academy.com</div>
-    <div style="margin-top:8px">© 2026 YAZLI FATEH — All rights reserved.</div>
+
+    <strong>
+        YAZLI FATEH | ALFA
+    </strong>
+
+    <br><br>
+
+    Software Developer • Web Developer • UI/UX Designer
+
+    <br><br>
+
+    "Turning Ideas Into Powerful Digital Solutions."
+
+    <br><br>
+
+    © 2026 ALFA — All Rights Reserved.
+
 </footer>
 
 <script>
-// small JS to handle mobile menu & reveal
-const menuBtn = document.getElementById('menu');
-const navLinks = document.getElementById('navLinks');
-menuBtn.addEventListener('click', ()=> navLinks.classList.toggle('open'));
 
-const reveals = document.querySelectorAll('.reveal');
-const obs = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show'); });
-},{threshold:.12});
-reveals.forEach(r=>obs.observe(r));
+/* ================= MOBILE MENU ================= */
+
+const menu = document.getElementById("menu");
+const navLinks = document.getElementById("navLinks");
+
+menu.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+});
+
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+    });
+});
+
+
+/* ================= SKILLS ================= */
+
+const skills = [
+
+    ["HTML5",95],
+    ["CSS3",95],
+    ["JavaScript",92],
+    ["TypeScript",86],
+    ["React.js",90],
+    ["Next.js",85],
+    ["Node.js",88],
+    ["PHP",80],
+    ["Python",85],
+    ["Java",78],
+    ["C",80],
+    ["C++",82],
+    ["C#",78],
+    ["SQL",88],
+    ["MongoDB",82],
+    ["Git & GitHub",90],
+    ["Bootstrap",90],
+    ["Tailwind CSS",92],
+    ["UI/UX Design",90]
+
+];
+
+const skillsGrid =
+    document.getElementById("skillsGrid");
+
+skills.forEach(skill => {
+
+    const card = document.createElement("div");
+
+    card.className = "card skill";
+
+    card.innerHTML = `
+
+        <div class="skill-name">
+            ${skill[0]}
+        </div>
+
+        <div class="progress">
+            <span style="width:${skill[1]}%"></span>
+        </div>
+
+    `;
+
+    skillsGrid.appendChild(card);
+
+});
+
+
+/* ================= SCROLL REVEAL ================= */
+
+const observer =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if(entry.isIntersecting){
+
+                    entry.target.classList.add("show");
+
+                }
+
+            });
+
+        },
+        {
+            threshold:.12
+        }
+    );
+
+document
+    .querySelectorAll(".reveal")
+    .forEach(element => {
+        observer.observe(element);
+    });
+
+
+/* ================= MOUSE HOLOGRAM LIGHT ================= */
+
+const cursorLight =
+    document.getElementById("cursorLight");
+
+document.addEventListener("mousemove", event => {
+
+    cursorLight.style.left =
+        event.clientX + "px";
+
+    cursorLight.style.top =
+        event.clientY + "px";
+
+});
+
+
+/* ================= PARTICLES ================= */
+
+const canvas =
+    document.getElementById("particles");
+
+const ctx =
+    canvas.getContext("2d");
+
+let width;
+let height;
+let particles = [];
+
+function resizeCanvas(){
+
+    width =
+        canvas.width =
+        window.innerWidth;
+
+    height =
+        canvas.height =
+        window.innerHeight;
+
+}
+
+function createParticles(){
+
+    particles = [];
+
+    for(let i = 0; i < 100; i++){
+
+        particles.push({
+
+            x:Math.random() * width,
+
+            y:Math.random() * height,
+
+            vx:(Math.random() - .5) * .25,
+
+            vy:(Math.random() - .5) * .25,
+
+            radius:Math.random() * 1.5 + .3
+
+        });
+
+    }
+
+}
+
+function animateParticles(){
+
+    ctx.clearRect(
+        0,
+        0,
+        width,
+        height
+    );
+
+    particles.forEach(p => {
+
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if(p.x < 0 || p.x > width){
+            p.vx *= -1;
+        }
+
+        if(p.y < 0 || p.y > height){
+            p.vy *= -1;
+        }
+
+        ctx.beginPath();
+
+        ctx.arc(
+            p.x,
+            p.y,
+            p.radius,
+            0,
+            Math.PI * 2
+        );
+
+        ctx.fillStyle =
+            "rgba(0,245,255,.55)";
+
+        ctx.fill();
+
+    });
+
+    requestAnimationFrame(
+        animateParticles
+    );
+
+}
+
+resizeCanvas();
+createParticles();
+animateParticles();
+
+window.addEventListener(
+    "resize",
+    () => {
+
+        resizeCanvas();
+        createParticles();
+
+    }
+);
+
+
+/* ================= CARD LIGHT ================= */
+
+document
+.querySelectorAll(".card")
+.forEach(card => {
+
+    card.addEventListener(
+        "mousemove",
+        event => {
+
+            const rect =
+                card.getBoundingClientRect();
+
+            const x =
+                event.clientX - rect.left;
+
+            const y =
+                event.clientY - rect.top;
+
+            card.style.background = `
+
+                radial-gradient(
+                    circle at ${x}px ${y}px,
+                    rgba(0,245,255,.11),
+                    rgba(255,255,255,.035) 45%
+                )
+
+            `;
+
+        }
+    );
+
+    card.addEventListener(
+        "mouseleave",
+        () => {
+
+            card.style.background = "";
+
+        }
+    );
+
+});
+
 </script>
 
 </body>
