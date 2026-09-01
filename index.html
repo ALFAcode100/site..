@@ -7,18 +7,16 @@
 <title>YAZLI FATEH | ALFA.CÔDE</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Michroma:wght@400&display=swap');
 
 :root{
-    --bg:#030508;
-    --cyan:#00E5FF;
-    --purple:#9B00FF;
-    --blue:#0066FF;
-    --gold:#FFD800;
+    --bg:#050505;
+    --primary-purple:#8A2BE2;
+    --secondary-purple:#B266FF;
     --white:#FFFFFF;
-    --gray:#A7BOBC;
-    --glass:rgba(0,229,255,.06);
-    --border:rgba(0,229,255,.28);
+    --gray:#CFCFCF;
+    --glass:rgba(138,43,226,.06);
+    --border:rgba(138,43,226,.28);
 }
 
 *{
@@ -32,9 +30,9 @@ html{
 }
 
 body{
-    background:#030508;
+    background:#050505;
     color:white;
-    font-family:Inter,sans-serif;
+    font-family:Poppins,sans-serif;
     overflow-x:hidden;
 }
 
@@ -52,8 +50,8 @@ body{
     z-index:-4;
     opacity:.13;
     background-image:
-        linear-gradient(rgba(0,245,255,.2) 1px,transparent 1px),
-        linear-gradient(90deg,rgba(123,97,255,.2) 1px,transparent 1px);
+        linear-gradient(rgba(138,43,226,.2) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(178,102,255,.2) 1px,transparent 1px);
     background-size:60px 60px;
     transform:perspective(600px) rotateX(60deg) scale(1.7);
     transform-origin:center bottom;
@@ -76,13 +74,13 @@ body{
 }
 
 .ambient.one{
-    background:var(--cyan);
+    background:var(--primary-purple);
     top:-250px;
     left:-180px;
 }
 
 .ambient.two{
-    background:var(--purple);
+    background:var(--secondary-purple);
     right:-220px;
     bottom:-200px;
 }
@@ -105,20 +103,20 @@ nav{
     justify-content:space-between;
     align-items:center;
     z-index:1000;
-    box-shadow:0 0 35px rgba(0,245,255,.08);
+    box-shadow:0 0 35px rgba(138,43,226,.08);
 }
 
 .logo{
-    font-family:Orbitron;
-    font-weight:800;
+    font-family:Michroma;
+    font-weight:400;
     font-size:20px;
     letter-spacing:3px;
-    color:var(--cyan);
-    text-shadow:0 0 15px var(--cyan);
+    color:var(--primary-purple);
+    text-shadow:0 0 15px var(--primary-purple);
 }
 
 .logo span{
-    color:var(--gold);
+    color:var(--secondary-purple);
 }
 
 nav ul{
@@ -135,8 +133,8 @@ nav a{
 }
 
 nav a:hover{
-    color:var(--cyan);
-    text-shadow:0 0 12px var(--cyan);
+    color:var(--primary-purple);
+    text-shadow:0 0 12px var(--primary-purple);
 }
 
 .menu{
@@ -156,14 +154,14 @@ section{
 }
 
 .section-title{
-    font-family:Orbitron;
+    font-family:Michroma;
     font-size:clamp(28px,5vw,48px);
     margin-bottom:12px;
 }
 
 .section-title span{
-    color:var(--cyan);
-    text-shadow:0 0 18px rgba(0,245,255,.5);
+    color:var(--primary-purple);
+    text-shadow:0 0 18px rgba(138,43,226,.5);
 }
 
 .section-description{
@@ -177,11 +175,11 @@ section{
     overflow:hidden;
     padding:28px;
     border-radius:24px;
-    border:1px solid rgba(0,245,255,.14);
+    border:1px solid rgba(138,43,226,.14);
     background:linear-gradient(
         145deg,
-        rgba(255,255,255,.075),
-        rgba(255,255,255,.018)
+        rgba(138,43,226,.075),
+        rgba(138,43,226,.018)
     );
     backdrop-filter:blur(18px);
     -webkit-backdrop-filter:blur(18px);
@@ -193,9 +191,9 @@ section{
 
 .card:hover{
     transform:translateY(-7px);
-    border-color:rgba(0,245,255,.45);
+    border-color:rgba(138,43,226,.45);
     box-shadow:
-        0 20px 70px rgba(0,245,255,.1),
+        0 20px 70px rgba(138,43,226,.1),
         inset 0 1px rgba(255,255,255,.1);
 }
 
@@ -209,10 +207,10 @@ section{
     background:linear-gradient(
         90deg,
         transparent,
-        var(--cyan),
+        var(--primary-purple),
         transparent
     );
-    box-shadow:0 0 15px var(--cyan);
+    box-shadow:0 0 15px var(--primary-purple);
 }
 
 /* ================= HERO ================= */
@@ -234,28 +232,28 @@ section{
     display:inline-block;
     padding:8px 16px;
     border-radius:50px;
-    border:1px solid rgba(0,245,255,.35);
-    background:rgba(0,245,255,.05);
-    color:var(--cyan);
+    border:1px solid rgba(138,43,226,.35);
+    background:rgba(138,43,226,.05);
+    color:var(--primary-purple);
     font-size:11px;
     letter-spacing:3px;
     text-transform:uppercase;
-    box-shadow:0 0 25px rgba(0,245,255,.08);
+    box-shadow:0 0 25px rgba(138,43,226,.08);
 }
 
 .hero h1{
     margin:25px 0 15px;
-    font-family:Orbitron;
-    font-weight:800;
+    font-family:Michroma;
+    font-weight:400;
     font-size:clamp(48px,9vw,105px);
     letter-spacing:5px;
     line-height:1;
     background:linear-gradient(
         90deg,
         white,
-        var(--cyan),
+        var(--primary-purple),
         white,
-        var(--purple),
+        var(--secondary-purple),
         white
     );
     background-size:300%;
@@ -272,7 +270,7 @@ section{
 }
 
 .hero-subtitle{
-    font-family:Orbitron;
+    font-family:Michroma;
     color:#dbe2e8;
     font-size:clamp(12px,2vw,19px);
     letter-spacing:3px;
@@ -300,25 +298,26 @@ section{
     border-radius:13px;
     text-decoration:none;
     color:white;
-    border:1px solid rgba(0,245,255,.4);
-    background:rgba(255,255,255,.045);
+    border:1px solid rgba(138,43,226,.4);
+    background:rgba(138,43,226,.045);
     backdrop-filter:blur(10px);
     transition:.35s;
+    font-family:Poppins;
 }
 
 .btn:hover{
-    color:var(--cyan);
+    color:var(--primary-purple);
     transform:translateY(-3px);
-    box-shadow:0 0 28px rgba(0,245,255,.3);
+    box-shadow:0 0 28px rgba(138,43,226,.3);
 }
 
 .btn.gold{
-    border-color:rgba(255,215,0,.4);
+    border-color:rgba(178,102,255,.4);
 }
 
 .btn.gold:hover{
-    color:var(--gold);
-    box-shadow:0 0 28px rgba(255,215,0,.2);
+    color:var(--secondary-purple);
+    box-shadow:0 0 28px rgba(178,102,255,.2);
 }
 
 /* ================= ABOUT ================= */
@@ -337,7 +336,7 @@ section{
     background:
         radial-gradient(
             circle,
-            rgba(0,245,255,.18),
+            rgba(138,43,226,.18),
             transparent 55%
         );
 }
@@ -346,17 +345,17 @@ section{
     width:155px;
     height:155px;
     border-radius:50%;
-    border:1px solid var(--cyan);
+    border:1px solid var(--primary-purple);
     display:flex;
     justify-content:center;
     align-items:center;
-    color:var(--cyan);
-    font-family:Orbitron;
+    color:var(--primary-purple);
+    font-family:Michroma;
     font-size:42px;
-    font-weight:800;
+    font-weight:400;
     box-shadow:
-        0 0 30px var(--cyan),
-        inset 0 0 30px rgba(0,245,255,.25);
+        0 0 30px var(--primary-purple),
+        inset 0 0 30px rgba(138,43,226,.25);
     animation:pulse 3s infinite;
 }
 
@@ -364,14 +363,18 @@ section{
     50%{
         transform:scale(1.08);
         box-shadow:
-            0 0 70px var(--cyan),
-            inset 0 0 40px rgba(0,245,255,.4);
+            0 0 70px var(--primary-purple),
+            inset 0 0 40px rgba(138,43,226,.4);
     }
 }
 
 .about-text p{
     color:var(--gray);
     margin-bottom:15px;
+}
+
+.about-text h3{
+    font-family:Michroma;
 }
 
 .stats{
@@ -383,8 +386,8 @@ section{
 
 .stat strong{
     display:block;
-    color:var(--gold);
-    font-family:Orbitron;
+    color:var(--primary-purple);
+    font-family:Michroma;
     font-size:27px;
 }
 
@@ -393,12 +396,6 @@ section{
 }
 
 /* ================= SKILLS ================= */
-
-.skills-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
-}
 
 .skills-grid{
     display:grid;
@@ -413,13 +410,53 @@ section{
     justify-content:center;
     align-items:center;
     text-align:center;
+    position:relative;
+    overflow:hidden;
+    border-radius:24px;
+    border:1px solid rgba(138,43,226,.14);
+    background:linear-gradient(
+        145deg,
+        rgba(138,43,226,.075),
+        rgba(138,43,226,.018)
+    );
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.08),
+        0 20px 60px rgba(0,0,0,.3);
+    transition:.4s;
+}
+
+.skill::before{
+    content:"";
+    position:absolute;
+    width:150px;
+    height:2px;
+    top:0;
+    left:10%;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        var(--primary-purple),
+        transparent
+    );
+    box-shadow:0 0 15px var(--primary-purple);
+}
+
+.skill:hover{
+    transform:translateY(-7px);
+    border-color:rgba(138,43,226,.45);
+    box-shadow:
+        0 20px 70px rgba(138,43,226,.1),
+        inset 0 1px rgba(255,255,255,.1);
 }
 
 .skill-name{
-    font-family:Orbitron;
+    font-family:Poppins;
     font-size:16px;
+    font-weight:500;
     color:white;
-    text-shadow:0 0 12px rgba(0,245,255,.5);
+    text-shadow:0 0 12px rgba(138,43,226,.5);
 }
 
 /* ================= SERVICES ================= */
@@ -432,13 +469,13 @@ section{
 
 .icon{
     font-size:32px;
-    color:var(--cyan);
+    color:var(--primary-purple);
     margin-bottom:14px;
-    text-shadow:0 0 18px var(--cyan);
+    text-shadow:0 0 18px var(--primary-purple);
 }
 
 .card h3{
-    font-family:Orbitron;
+    font-family:Michroma;
     font-size:17px;
     margin-bottom:10px;
 }
@@ -457,20 +494,20 @@ section{
 }
 
 .featured{
-    border-color:rgba(255,215,0,.4);
+    border-color:rgba(138,43,226,.4);
 }
 
 .price{
-    color:var(--gold);
-    font-family:Orbitron;
+    color:var(--primary-purple);
+    font-family:Michroma;
     font-size:34px;
-    font-weight:800;
+    font-weight:400;
     margin:18px 0;
 }
 
 .price small{
     color:var(--gray);
-    font-family:Inter;
+    font-family:Poppins;
     font-size:11px;
 }
 
@@ -486,8 +523,147 @@ section{
 
 .clean-list li::before{
     content:"✓";
-    color:var(--cyan);
+    color:var(--primary-purple);
     margin-right:8px;
+}
+
+/* ================= PAYMENT METHODS ================= */
+
+.payment-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:17px;
+}
+
+.payment-card{
+    position:relative;
+    overflow:hidden;
+    padding:28px;
+    border-radius:24px;
+    border:1px solid rgba(138,43,226,.14);
+    background:linear-gradient(
+        145deg,
+        rgba(138,43,226,.075),
+        rgba(138,43,226,.018)
+    );
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.08),
+        0 20px 60px rgba(0,0,0,.3);
+    transition:.4s;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    min-height:180px;
+}
+
+.payment-card::before{
+    content:"";
+    position:absolute;
+    width:150px;
+    height:2px;
+    top:0;
+    left:10%;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        var(--primary-purple),
+        transparent
+    );
+    box-shadow:0 0 15px var(--primary-purple);
+}
+
+.payment-card:hover{
+    transform:translateY(-7px);
+    border-color:rgba(138,43,226,.45);
+    box-shadow:
+        0 20px 70px rgba(138,43,226,.1),
+        inset 0 1px rgba(255,255,255,.1);
+}
+
+.payment-icon{
+    font-size:40px;
+    margin-bottom:12px;
+}
+
+.payment-card h3{
+    font-family:Michroma;
+    font-size:16px;
+    color:white;
+}
+
+/* ================= REGISTRATION FORM ================= */
+
+.form-container{
+    max-width:700px;
+    margin:0 auto;
+}
+
+.form-group{
+    margin-bottom:20px;
+}
+
+.form-group label{
+    display:block;
+    font-family:Poppins;
+    font-weight:500;
+    margin-bottom:8px;
+    color:white;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+    padding:12px 16px;
+    border:1px solid rgba(138,43,226,.28);
+    border-radius:13px;
+    background:rgba(138,43,226,.05);
+    backdrop-filter:blur(10px);
+    color:white;
+    font-family:Poppins;
+    font-size:14px;
+    transition:.3s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder{
+    color:rgba(207,207,207,.5);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    outline:none;
+    border-color:rgba(138,43,226,.45);
+    box-shadow:0 0 15px rgba(138,43,226,.2);
+}
+
+.form-group input option{
+    background:#050505;
+    color:white;
+}
+
+.form-submit{
+    width:100%;
+    padding:13px 23px;
+    border:1px solid rgba(138,43,226,.4);
+    border-radius:13px;
+    background:linear-gradient(135deg,var(--primary-purple),var(--secondary-purple));
+    color:white;
+    font-family:Poppins;
+    font-weight:600;
+    font-size:16px;
+    cursor:pointer;
+    transition:.35s;
+}
+
+.form-submit:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 28px rgba(138,43,226,.3);
 }
 
 /* ================= CONTACT ================= */
@@ -505,13 +681,14 @@ section{
     margin-top:13px;
     padding:16px;
     border-radius:15px;
-    border:1px solid rgba(255,255,255,.08);
-    background:rgba(255,255,255,.025);
+    border:1px solid rgba(138,43,226,.14);
+    background:rgba(138,43,226,.025);
 }
 
 .contact-item .icon{
     margin:0;
     font-size:25px;
+    color:var(--primary-purple);
 }
 
 .contact-item b{
@@ -530,14 +707,14 @@ section{
 footer{
     text-align:center;
     padding:50px 20px;
-    border-top:1px solid rgba(255,255,255,.08);
+    border-top:1px solid rgba(138,43,226,.14);
     color:var(--gray);
     font-size:13px;
 }
 
 footer strong{
-    font-family:Orbitron;
-    color:var(--cyan);
+    font-family:Michroma;
+    color:var(--primary-purple);
     letter-spacing:2px;
 }
 
@@ -569,7 +746,7 @@ footer strong{
     background:
         radial-gradient(
             circle,
-            rgba(0,245,255,.12),
+            rgba(138,43,226,.12),
             transparent 65%
         );
 }
@@ -606,7 +783,8 @@ footer strong{
 
     .skills-grid,
     .services-grid,
-    .courses-grid{
+    .courses-grid,
+    .payment-grid{
         grid-template-columns:1fr 1fr;
     }
 }
@@ -628,7 +806,8 @@ footer strong{
 
     .skills-grid,
     .services-grid,
-    .courses-grid{
+    .courses-grid,
+    .payment-grid{
         grid-template-columns:1fr;
     }
 
@@ -666,6 +845,7 @@ footer strong{
         <li><a href="#skills">Skills</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#courses">Courses</a></li>
+        <li><a href="#register">Register</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 
@@ -887,12 +1067,12 @@ footer strong{
             </span>
 
             <h3 style="margin-top:15px;">
-                Full Web Development
+                In-Person Course
             </h3>
 
             <div class="price">
              87000
-                <small>IN-PERSON: 87000 DA / 370$</small>
+                <small>87000 DA / 350$</small>
             </div>
 
             <ul class="clean-list">
@@ -908,15 +1088,20 @@ footer strong{
         <div class="card">
 
             <h3>
-                Online Learning
+                Recorded Online Course
             </h3>
+
+            <div class="price">
+             50000
+                <small>50000 DA / 220$</small>
+            </div>
 
             <ul class="clean-list">
 
-                <li>Online Courses — 55000 DA / 220$</li>
-                <li>Under ALFA Supervision</li>
-                <li>Live Support</li>
+                <li>Complete Course Access</li>
                 <li>Practical Projects</li>
+                <li>Email Support</li>
+                <li>Lifetime Access</li>
                 <li>Certificate Of Completion</li>
 
             </ul>
@@ -926,13 +1111,13 @@ footer strong{
         <div class="card">
 
             <h3>
-                Under ALFA Supervision
+                Need Custom Training?
             </h3>
 
             <p>
-                Practical projects, structured lessons,
+                Personalized learning paths, structured lessons,
                 professional guidance and real-world
-                development workflows.
+                development workflows tailored to your needs.
             </p>
 
             <div class="buttons"
@@ -987,6 +1172,115 @@ footer strong{
 
 </section>
 
+<!-- ================= PAYMENT METHODS ================= -->
+
+<section class="reveal">
+
+    <h2 class="section-title">
+        Payment <span>Methods</span>
+    </h2>
+
+    <p class="section-description">
+        Multiple secure payment options for your convenience.
+    </p>
+
+    <div class="payment-grid">
+
+        <div class="payment-card">
+            <div class="payment-icon">📱</div>
+            <h3>BaridiMob</h3>
+        </div>
+
+        <div class="payment-card">
+            <div class="payment-icon">₿</div>
+            <h3>Binance</h3>
+        </div>
+
+        <div class="payment-card">
+            <div class="payment-icon">🔷</div>
+            <h3>Bybit</h3>
+        </div>
+
+        <div class="payment-card">
+            <div class="payment-icon">🏦</div>
+            <h3>Bank Transfer</h3>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= REGISTRATION / ORDER FORM ================= -->
+
+<section id="register" class="reveal">
+
+    <h2 class="section-title">
+        Register <span>Now</span>
+    </h2>
+
+    <p class="section-description">
+        Fill out the form below to get started with ALFA services.
+    </p>
+
+    <div class="form-container">
+
+        <form id="registrationForm">
+
+            <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input 
+                    type="text" 
+                    id="fullName" 
+                    name="fullName" 
+                    placeholder="Enter your full name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone" 
+                    placeholder="Enter your phone number"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="service">Service Selection *</label>
+                <select id="service" name="service" required>
+                    <option value="">Select a service</option>
+                    <option value="in-person-course">In-Person Course — 87000 DA / 350$</option>
+                    <option value="recorded-course">Recorded Online Course — 50000 DA / 220$</option>
+                    <option value="website-dev">Website Development</option>
+                    <option value="web-app-dev">Web Application Development</option>
+                    <option value="ui-ux">UI/UX Design</option>
+                    <option value="software-dev">Software Development</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea 
+                    id="message" 
+                    name="message" 
+                    placeholder="Tell us more about your project or inquiry"
+                    rows="5"
+                ></textarea>
+            </div>
+
+            <button type="submit" class="form-submit">
+                Submit Registration
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
 <!-- ================= CONTACT ================= -->
 
 <section id="contact" class="reveal">
@@ -1002,72 +1296,36 @@ footer strong{
 
     <div class="contact-grid">
 
-        <div class="card">
-
-            <h3>
-                Contact ALFA
-            </h3>
-
-            <div class="contact-item">
-
-                <div class="icon">
-                    ✉
-                </div>
-
-                <div>
-                    <b>Email</b>
-                    <span>
-                        fatehyazli5@gmail.com
-                    </span>
-                </div>
-
+        <div class="contact-item">
+            <div class="icon">✉</div>
+            <div>
+                <b>Email</b>
+                <span>info@alfa-academy.com</span>
             </div>
-
-            <div class="contact-item">
-
-                <div class="icon">
-                    ☎
-                </div>
-
-                <div>
-                    <b>Phone</b>
-                    <span>
-                        0549576176
-                    </span>
-                </div>
-
-            </div>
-
         </div>
 
-        <div class="card">
-
-            <h3>
-                Ready To Start?
-            </h3>
-
-            <p style="margin:15px 0;">
-                Tell me about your website, application,
-                store, software project or design idea.
-            </p>
-
-            <div class="buttons"
-                 style="justify-content:flex-start;">
-
-                <a
-                    class="btn"
-                    href="mailto:fatehyazli5@gmail.com">
-                    Send Email
-                </a>
-
-                <a
-                    class="btn gold"
-                    href="https://wa.me/213549576176">
-                    WhatsApp ALFA
-                </a>
-
+        <div class="contact-item">
+            <div class="icon">💬</div>
+            <div>
+                <b>WhatsApp</b>
+                <span><a href="https://wa.me/213" style="color:var(--primary-purple);text-decoration:none;">Message us</a></span>
             </div>
+        </div>
 
+        <div class="contact-item">
+            <div class="icon">📍</div>
+            <div>
+                <b>Location</b>
+                <span>Algeria</span>
+            </div>
+        </div>
+
+        <div class="contact-item">
+            <div class="icon">🕐</div>
+            <div>
+                <b>Availability</b>
+                <span>Mon - Fri, 9 AM - 6 PM</span>
+            </div>
         </div>
 
     </div>
@@ -1077,286 +1335,159 @@ footer strong{
 <!-- ================= FOOTER ================= -->
 
 <footer>
-
-    <strong>
-        YAZLI FATEH | ALFA
-    </strong>
-
-    <br><br>
-
-    Software Developer • Web Developer • UI/UX Designer
-
-    <br><br>
-
-    "Turning Ideas Into Powerful Digital Solutions."
-
-    <br><br>
-
-    © 2026 ALFA — All Rights Reserved.
-
+    <p>© 2024 YAZLI FATEH — <strong>ALFA</strong>. All rights reserved.</p>
 </footer>
 
 <script>
-
-/* ================= MOBILE MENU ================= */
-
-const menu = document.getElementById("menu");
-const navLinks = document.getElementById("navLinks");
-
-menu.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-});
-
-document.querySelectorAll("nav a").forEach(link => {
-    link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
-    });
-});
-
-
-/* ================= SKILLS ================= */
-
+// ================= SKILLS DATA ================= 
 const skills = [
-
-    ["HTML5",95],
-    ["CSS3",95],
-    ["JavaScript",92],
-    ["TypeScript",86],
-    ["React.js",90],
-    ["Next.js",85],
-    ["Node.js",88],
-    ["PHP",80],
-    ["Python",85],
-    ["Java",78],
-    ["C",80],
-    ["C++",82],
-    ["C#",78],
-    ["SQL",88],
-    ["MongoDB",82],
-    ["Git & GitHub",90],
-    ["Bootstrap",90],
-    ["Tailwind CSS",92],
-    ["UI/UX Design",90]
-
+    'JavaScript',
+    'TypeScript',
+    'React',
+    'Vue.js',
+    'Angular',
+    'Node.js',
+    'Python',
+    'HTML5',
+    'CSS3',
+    'Tailwind CSS',
+    'MongoDB',
+    'PostgreSQL',
+    'Firebase',
+    'Git',
+    'Docker',
+    'AWS',
+    'UI Design',
+    'UX Design',
+    'Figma',
+    'Adobe XD'
 ];
 
-const skillsGrid =
-    document.getElementById("skillsGrid");
-
+// Populate Skills Grid
+const skillsGrid = document.getElementById('skillsGrid');
 skills.forEach(skill => {
-
-    const card = document.createElement("div");
-
-    card.className = "card skill";
-
-    card.innerHTML = `
-        <div class="skill-name">
-            ${skill[0]}
-        </div>
-    `;
-
-    skillsGrid.appendChild(card);
-
+    const skillElement = document.createElement('div');
+    skillElement.className = 'skill card';
+    skillElement.innerHTML = `<span class="skill-name">${skill}</span>`;
+    skillsGrid.appendChild(skillElement);
 });
 
+// ================= MOBILE MENU ================= 
+const menuBtn = document.getElementById('menu');
+const navLinks = document.getElementById('navLinks');
 
-/* ================= SCROLL REVEAL ================= */
+menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+});
 
-const observer =
-    new IntersectionObserver(
-        entries => {
-
-            entries.forEach(entry => {
-
-                if(entry.isIntersecting){
-
-                    entry.target.classList.add("show");
-
-                }
-
-            });
-
-        },
-        {
-            threshold:.12
-        }
-    );
-
-document
-    .querySelectorAll(".reveal")
-    .forEach(element => {
-        observer.observe(element);
+// Close menu when a link is clicked
+navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
     });
-
-
-/* ================= MOUSE HOLOGRAM LIGHT ================= */
-
-const cursorLight =
-    document.getElementById("cursorLight");
-
-document.addEventListener("mousemove", event => {
-
-    cursorLight.style.left =
-        event.clientX + "px";
-
-    cursorLight.style.top =
-        event.clientY + "px";
-
 });
 
+// ================= REVEAL ON SCROLL ================= 
+const revealElements = document.querySelectorAll('.reveal');
 
-/* ================= PARTICLES ================= */
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+}, {
+    threshold: 0.1
+});
 
-const canvas =
-    document.getElementById("particles");
+revealElements.forEach(el => observer.observe(el));
 
-const ctx =
-    canvas.getContext("2d");
+// ================= CURSOR LIGHT ================= 
+const cursorLight = document.getElementById('cursorLight');
 
-let width;
-let height;
-let particles = [];
+document.addEventListener('mousemove', (e) => {
+    cursorLight.style.left = e.clientX + 'px';
+    cursorLight.style.top = e.clientY + 'px';
+});
 
-function resizeCanvas(){
+// ================= PARTICLES ================= 
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
 
-    width =
-        canvas.width =
-        window.innerWidth;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-    height =
-        canvas.height =
-        window.innerHeight;
+const particles = [];
 
-}
-
-function createParticles(){
-
-    particles = [];
-
-    for(let i = 0; i < 100; i++){
-
-        particles.push({
-
-            x:Math.random() * width,
-
-            y:Math.random() * height,
-
-            vx:(Math.random() - .5) * .25,
-
-            vy:(Math.random() - .5) * .25,
-
-            radius:Math.random() * 1.5 + .3
-
-        });
-
+class Particle {
+    constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 1;
+        this.speedX = Math.random() * 2 - 1;
+        this.speedY = Math.random() * 2 - 1;
+        this.opacity = Math.random() * 0.5 + 0.2;
     }
 
-}
+    update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
 
-function animateParticles(){
+        if (this.x > canvas.width) this.x = 0;
+        if (this.x < 0) this.x = canvas.width;
+        if (this.y > canvas.height) this.y = 0;
+        if (this.y < 0) this.y = canvas.height;
+    }
 
-    ctx.clearRect(
-        0,
-        0,
-        width,
-        height
-    );
-
-    particles.forEach(p => {
-
-        p.x += p.vx;
-        p.y += p.vy;
-
-        if(p.x < 0 || p.x > width){
-            p.vx *= -1;
-        }
-
-        if(p.y < 0 || p.y > height){
-            p.vy *= -1;
-        }
-
+    draw() {
+        ctx.fillStyle = `rgba(138, 43, 226, ${this.opacity})`;
         ctx.beginPath();
-
-        ctx.arc(
-            p.x,
-            p.y,
-            p.radius,
-            0,
-            Math.PI * 2
-        );
-
-        ctx.fillStyle =
-            "rgba(0,245,255,.55)";
-
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
-
-    });
-
-    requestAnimationFrame(
-        animateParticles
-    );
-
+    }
 }
 
-resizeCanvas();
-createParticles();
+function initParticles() {
+    particles.length = 0;
+    for (let i = 0; i < 50; i++) {
+        particles.push(new Particle());
+    }
+}
+
+function animateParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(particle => {
+        particle.update();
+        particle.draw();
+    });
+    requestAnimationFrame(animateParticles);
+}
+
+initParticles();
 animateParticles();
 
-window.addEventListener(
-    "resize",
-    () => {
-
-        resizeCanvas();
-        createParticles();
-
-    }
-);
-
-
-/* ================= CARD LIGHT ================= */
-
-document
-.querySelectorAll(".card")
-.forEach(card => {
-
-    card.addEventListener(
-        "mousemove",
-        event => {
-
-            const rect =
-                card.getBoundingClientRect();
-
-            const x =
-                event.clientX - rect.left;
-
-            const y =
-                event.clientY - rect.top;
-
-            card.style.background = `
-
-                radial-gradient(
-                    circle at ${x}px ${y}px,
-                    rgba(0,245,255,.11),
-                    rgba(255,255,255,.035) 45%
-                )
-
-            `;
-
-        }
-    );
-
-    card.addEventListener(
-        "mouseleave",
-        () => {
-
-            card.style.background = "";
-
-        }
-    );
-
+window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    initParticles();
 });
 
+// ================= FORM HANDLING ================= 
+document.getElementById('registrationForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = {
+        fullName: document.getElementById('fullName').value,
+        phone: document.getElementById('phone').value,
+        service: document.getElementById('service').value,
+        message: document.getElementById('message').value
+    };
+    
+    console.log('Form submitted:', formData);
+    alert('Thank you for your registration! We will contact you soon.');
+    this.reset();
+});
 </script>
 
 </body>
-    </html>
+</html>
